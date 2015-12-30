@@ -1,0 +1,1266 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"make-",
+				"make-health-bar"
+			],
+			[
+				"flip",
+				"flip-sprite"
+			],
+			[
+				"point",
+				"point-texts"
+			],
+			[
+				"advance",
+				"advance-snake"
+			],
+			[
+				"set",
+				"set-text"
+			],
+			[
+				"def",
+				"defcomponent"
+			],
+			[
+				"v",
+				"v	arcadia"
+			],
+			[
+				"rig",
+				"rigidbody"
+			],
+			[
+				"make",
+				"make-level"
+			],
+			[
+				"ease",
+				"easeregistry"
+			],
+			[
+				"bucket",
+				"bucket-others"
+			],
+			[
+				"farm",
+				"farm-time"
+			],
+			[
+				"Unity",
+				"UnityEngine"
+			],
+			[
+				"ttw",
+				"ttweens"
+			],
+			[
+				"register",
+				"register_structure"
+			],
+			[
+				"indef",
+				"indefinate_name"
+			],
+			[
+				"room",
+				"room_conts"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"show",
+				"show-ratio"
+			],
+			[
+				"redu",
+				"reduce-operate"
+			],
+			[
+				"Sring",
+				"StringGroup"
+			],
+			[
+				"quat",
+				"quat-lerp"
+			],
+			[
+				"road",
+				"road-intersection"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"final",
+				"final_path"
+			],
+			[
+				"sty",
+				"style_target_mode"
+			],
+			[
+				"sele",
+				"selection_mode"
+			],
+			[
+				"style_",
+				"style_hash"
+			],
+			[
+				"hash",
+				"hash_style"
+			],
+			[
+				"sor",
+				"sort_patterns"
+			],
+			[
+				"sel",
+				"Selector"
+			],
+			[
+				"selection",
+				"selectionchange"
+			],
+			[
+				"style",
+				"style_compiler"
+			],
+			[
+				"total",
+				"total_elements"
+			],
+			[
+				"get",
+				"get_nicest_selector"
+			],
+			[
+				"common",
+				"common_id"
+			],
+			[
+				"pop",
+				"pop_best_group"
+			],
+			[
+				"open",
+				"open_callbacks"
+			],
+			[
+				"_",
+				"_fp_page_css"
+			],
+			[
+				"CSS",
+				"CSSRuleSetProxy"
+			],
+			[
+				"com",
+				"compile_sheet"
+			],
+			[
+				"comp",
+				"compare_selectors"
+			],
+			[
+				"user",
+				"user_css"
+			],
+			[
+				"rulese",
+				"ruleset_proxy"
+			],
+			[
+				"se",
+				"selector_source"
+			],
+			[
+				"is",
+				"is_class_contained_in_selection"
+			],
+			[
+				"resize",
+				"resize_tab_labels"
+			],
+			[
+				"pagelayer",
+				"pagelayer_tools_right"
+			],
+			[
+				"describe",
+				"describe_inside"
+			],
+			[
+				"deb",
+				"debug_tool"
+			],
+			[
+				"select",
+				"select_label_class"
+			],
+			[
+				"upd",
+				"update_selection_set"
+			],
+			[
+				"selected",
+				"selected_elements"
+			],
+			[
+				"paren",
+				"parent_path"
+			],
+			[
+				"success",
+				"success_callback"
+			],
+			[
+				"goog",
+				"goog_file_setup"
+			],
+			[
+				"files",
+				"files_loaded"
+			],
+			[
+				"brow",
+				"browser_options"
+			],
+			[
+				"storage_",
+				"_storage_list"
+			],
+			[
+				"succ",
+				"success_callback"
+			],
+			[
+				"stora",
+				"storage_select"
+			],
+			[
+				"folder",
+				"folder_children"
+			],
+			[
+				"mim",
+				"mime_imgs"
+			],
+			[
+				"file",
+				"file_system"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/ifps3/core.cljs",
+			"settings":
+			{
+				"buffer_size": 8223,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ifps3/util.cljs",
+			"settings":
+			{
+				"buffer_size": 1110,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/heh/core.clj",
+			"settings":
+			{
+				"buffer_size": 4876,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/heh/core.cljs",
+			"settings":
+			{
+				"buffer_size": 2583,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ifps3/cloud.cljs",
+			"settings":
+			{
+				"buffer_size": 4634,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ifps3/data.cljs",
+			"settings":
+			{
+				"buffer_size": 161,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/public/css/style.css",
+			"settings":
+			{
+				"buffer_size": 6667,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/public/css/std.css",
+			"settings":
+			{
+				"buffer_size": 5898,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/figwheel.clj",
+			"settings":
+			{
+				"buffer_size": 991,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/public/index.html",
+			"settings":
+			{
+				"buffer_size": 1393,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"syntax: cloj",
+				"Set Syntax: ClojureScript"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax",
+				"Set Syntax: Arcadia"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Add Channel"
+			],
+			[
+				"Snippet: ",
+				"Snippet: arcadia"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 233.0,
+		"history":
+		[
+			"view.run_command(\"expand_selection\", {\"to\": \"word\"})",
+			"text = '(load-string \"' + text.strip().replace('\"', r'\\\"') + '\")'",
+			"view.scope_name(view.find(r\"^[^;]*?\\(\", 0).end()-1)",
+			"view.scope_name(view.find(r\"^[^;]*?\\(\", 0).end()-1)\\",
+			"view.scope_name(view.find(r\"^[^;]*?\\(\", 0).end()-1)",
+			"view.find(r\"^[^;]*?\\(\", 0)",
+			"r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\".rfind(\"hard.input (:import [UnityEngine Input KeyCode Camera Physics Time])\")",
+			"r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\".rfind(\"(ns hard.input (:import [UnityEngine Input KeyCode Camera Physics Time])\")",
+			"r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\".rfind(\"(ns hard.input (:import [UnityEngine Input KeyCode Camera Physics Time]))\")",
+			"dir(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\")",
+			"r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\"",
+			"view.substr(view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3))",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3).substr",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3).text",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3).lines",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3).lines()",
+			"dir(view)",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3)",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3).begin()",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", view.find(r\"^[^;]*?\\(\", 0).begin() + 3)",
+			"view.find(r\"[\\}\\s][A-Za-z\\_!\\?\\*\\+\\-][\\w!\\?\\*\\+\\-:]*(\\.[\\w!\\?\\*\\+\\-:]+)*\", namespacedecl.begin() + 3)",
+			"view.scope_name(view.find(r\"^[^;]*?\\(\", 0).begin() + 1)",
+			"view.find(r\"^[^;]*?\\(\", 0)",
+			"namespacedecl ",
+			"view.scope_name(namespace.begin() + 1)",
+			"view.scope_name(namespacedecl.end()-1)",
+			"namespacedecl = view.find(r\"^[^;]*?\\(\", 0)",
+			"view.find(r\"^[^;]*?\\(\", 0)",
+			"view.scope_name(namespacedecl.end()-1)",
+			"view.scope_name",
+			"view",
+			"import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/jplur/Desktop/dev/ifps3",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/css",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/js",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/js/compiled",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/js/libs",
+		"/C/Users/jplur/Desktop/dev/ifps3/scripts",
+		"/C/Users/jplur/Desktop/dev/ifps3/src",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/heh",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3"
+	],
+	"file_history":
+	[
+		"/C/Users/jplur/Desktop/oisjfd.gif",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/css/style.css",
+		"/C/Users/jplur/Desktop/dev/ifps3/scripts/figwheel.clj",
+		"/C/Users/jplur/Desktop/dev/ifps3/project.clj",
+		"/C/Users/jplur/Downloads/by-id",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/util.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/db",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/heh/core.clj",
+		"/D/screenshots/arrow.png",
+		"/C/Users/jplur/Desktop/bake_vertex_diffuse.py",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/heh/core.cljs",
+		"/C/Users/jplur/Desktop/dev/archiver/project.clj",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/ui.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/views.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/components.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/index.html",
+		"/C/Users/jplur/Desktop/dev/archiver/resources/public/index.html",
+		"/C/Users/jplur/Desktop/db_0",
+		"/C/Users/jplur/Desktop/dev/ifps3/target/figwheel_temp/dev/figwheel/connect.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/cloud.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/learnnext/util.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/core.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/base.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/figwheel.bat",
+		"/C/Users/jplur/Desktop/dev/ifps3/.gitignore",
+		"/C/Users/jplur/Desktop/dev/archiver/src/archiver/core.cljs",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/macros.clj",
+		"/C/Users/jplur/Desktop/dev/ifps3/src/ifps3/pprint.cljs",
+		"/C/Users/jplur/work/dev/final/src/sync/matrix.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/data.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/mode.cljs",
+		"/C/Users/jplur/work/dev/final/project.clj",
+		"/C/Users/jplur/work/dev/final/src/sync/mouse.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/refs.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/workspace.cljs",
+		"/C/Users/jplur/work/dev/final/src/sync/convert.cljs",
+		"/C/Users/jplur/work/dev/final/.gitignore",
+		"/C/Users/jplur/work/dev/final/src/comp/appstate.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/macros.clj",
+		"/C/Users/jplur/work/dev/final/src/fp/selection.cljs",
+		"/C/Users/jplur/work/dev/final/src/heh/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/commands.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/scrubber.cljs",
+		"/C/Users/jplur/work/dev/final/src/fast/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/heh/core.clj",
+		"/C/Users/jplur/work/dev/final/resources/public/main.js",
+		"/C/Users/jplur/work/dev/final/src/fast/element.cljs",
+		"/C/Users/jplur/work/dev/final/src/css/parse.cljs",
+		"/C/Users/jplur/work/dev/final/src/css/spec.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/heh/core.cljs",
+		"/C/Users/jplur/work/dev/final/final.sublime-project",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/learnnext/data.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/resources/public/img/imgmeta.py",
+		"/C/Users/jplur/Desktop/dev/learnnext/resources/public/img/meta.txt",
+		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/giflife.py",
+		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/meta.txt",
+		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/imgmeta.py",
+		"/C/Users/jplur/Desktop/giflife.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/dense/core.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/impl.cljc",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/core.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/core.clj",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/learnnext/src/learnnext/data.cljs",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/learnnext/src/dollar/bill.cljs",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/learnnext/src/om/next/impl/refs.cljc",
+		"/C/Users/jplur/Desktop/dev/learnnext/project.clj",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Arcadia/Arcadia.tmlanguage",
+		"/C/Users/jplur/Desktop/dev/learnnext/learnnext.sublime-project",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojure.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Unity/Default.sublime-commands",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Unity/Main.sublime-menu",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/dense/macros.clj",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/dense/hand.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/short/hand.cljs",
+		"/C/Users/jplur/Desktop/dev/clj-peg/clj-peg.js",
+		"/C/Users/jplur/work/dev/unity/dual snake/Assets/tween/core.clj",
+		"/C/Users/jplur/work/dev/final/src/fp/flow.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/heh/core.clj",
+		"/C/Users/jplur/work/dev/unity/snake squared/Assets/hard/edit.clj",
+		"/C/Users/jplur/work/dev/final/src/comp/views.cljs",
+		"/C/Users/jplur/work/dev/final/src/fast/style.cljs",
+		"/C/Users/jplur/work/dev/final/src/sync/animation.cljs",
+		"/C/Users/jplur/work/dev/final/coffee/tracking.coffee",
+		"/C/Users/jplur/work/dev/final/src/comp/outliner.cljs",
+		"/C/Users/jplur/work/dev/final/src/dollar/bill.cljs",
+		"/C/Users/jplur/work/dev/final/src/fast/util.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/style.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/interactive.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/util.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/sync/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/depreciated.cljs",
+		"/C/Users/jplur/work/dev/final/resources/public/css/toolbox.css",
+		"/C/Users/jplur/work/dev/final/resources/public/index.html",
+		"/C/Users/jplur/work/dev/final/src/fp/std.clj",
+		"/C/Users/jplur/work/dev/final/src/css/units.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/canvas.cljs",
+		"/C/Users/jplur/work/dev/final/src/sync/space.cljs",
+		"/C/Users/jplur/work/dev/final/src/pdf/core.clj",
+		"/C/Users/jplur/work/dev/final/src/pdf/core.cljs",
+		"/C/Users/jplur/Desktop/giflife.html",
+		"/C/Users/jplur/Desktop/Vault (D) - Shortcut.lnk",
+		"/D/Blender/BlackIsle/New folder/04 CFNM GIFs/index.html",
+		"/C/Users/jplur/work/dev/final/src/comp/interface.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/dialogue.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/final.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/filebrowser.cljs",
+		"/C/Users/jplur/work/dev/final/resources/public/css/style-widgets.css",
+		"/C/Users/jplur/Desktop/dev/selenica/src/selenica/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/money/core.cljs",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/text_transfer.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojurescript.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/repls/repl.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/repls/subprocess_repl.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/ClojureScript/Default.sublime-commands",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Default.sublime-commands",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Default.sublime-keymap",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/ClojureScript/Main.sublime-menu",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/jplur/work/dev/unity/LD33/arcadia.sublime-project"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			"C:\\Users\\jplur\\Desktop\\dev\\ifps3",
+			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src\\ifps3",
+			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src",
+			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src\\ifps3",
+			"C:\\Users\\jplur\\Desktop\\dev\\ifps3",
+			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			"C:\\Users\\jplur\\work\\dev\\final",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			"C:\\Users\\jplur\\work\\dev\\final\\src\\fp",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			"C:\\Users\\jplur\\work\\dev\\final\\resources\\public\\css",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			"C:\\Users\\jplur\\work\\dev\\final\\src\\fp",
+			"C:\\Users\\jplur\\work\\dev\\unity\\demo\\Assets\\arcadia\\Source\\clojure",
+			"C:\\Users\\jplur\\work\\dev\\unity\\LD33Warmup\\Assets\\hard",
+			"C:\\Users\\jplur\\work\\dev\\unity\\LD33Warmup\\Assets\\warmup",
+			"C:\\Users\\jplur\\work\\dev\\unity\\LD33Warmup\\Assets\\hard",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			"C:\\Users\\jplur\\work\\dev\\final",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			"C:\\Users\\jplur\\work\\dev\\final",
+			"C:\\Users\\jplur\\work\\dev\\final\\src",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"prn",
+			"event",
+			"EventType",
+			"string",
+			"$",
+			".core.core",
+			"ifps3.core.core",
+			"macros",
+			"om.tools",
+			"root-ref",
+			"archiver",
+			"o->",
+			"build",
+			"pdf",
+			"doc-ref",
+			"value",
+			"_tokens",
+			":figwheel",
+			"doc-ref",
+			"left",
+			"Spaaaaaace",
+			"SPAAAaaace",
+			"spaaaaaa",
+			" (:",
+			"h",
+			"merge",
+			"conj",
+			" \n",
+			"print",
+			"\\.-",
+			"prn",
+			"meta",
+			"preds",
+			"sym",
+			" \n",
+			"\\n",
+			"([0-9]+(\\ |\\t))+",
+			"\\n",
+			"#",
+			"\\n\\t",
+			"#\\w+\\W",
+			"#())",
+			"to-array",
+			"\\.code",
+			"\\.cols",
+			"\\.idx",
+			".idx",
+			"walk-table",
+			", ",
+			"[ \\t]+\\[",
+			"\\}\\,",
+			"[\\n\\t\\r ]+\\}",
+			"\\,[\\n\\t\\r ]+",
+			"\\}[\\n\\t\\r ]+",
+			"\\][\\n\\t\\r ]+",
+			"\\[[\\n\\t\\r ]+",
+			"\\{[\\n\\t\\r ]+",
+			"key",
+			"A",
+			"contentedit",
+			":state",
+			"hover",
+			"px",
+			"draggable",
+			"drag-fns",
+			"select-cursor-keys",
+			"active-doc-data",
+			"get-doc-el",
+			"kw->str",
+			"put-local",
+			"canvas",
+			"c/",
+			"calc-iframe-dim",
+			"get-doc-el",
+			"nts",
+			"_m.",
+			"_m",
+			"@",
+			"make_arrange_gradient",
+			"Selection",
+			"window",
+			" _m",
+			"_m",
+			"\"_m\"",
+			"_M",
+			"_m",
+			"scale",
+			"_m",
+			"_M",
+			"_m",
+			"draw-rulers",
+			"update-space",
+			":window-resize",
+			"measure-window",
+			"h",
+			"clip",
+			"handle-under",
+			"e->uid",
+			"UID",
+			"string",
+			"selection/",
+			"selection",
+			"(class-str",
+			"class-str",
+			"element-offset",
+			" px",
+			"px",
+			"element-offset",
+			"class-str",
+			"icon",
+			"draggable",
+			"modal-box",
+			"dialogue",
+			"modal-box",
+			"icon",
+			"click-mode-option",
+			"UID",
+			"alter-class-string",
+			":_m",
+			"parts",
+			"guid",
+			"KEYS-DOWN",
+			"MOUSE-DOWN-POS",
+			"NO-UPDATE",
+			"DOC->UID->EL",
+			"MOUSE-DOWN-WORKSPACE",
+			"string",
+			"depreciated"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"Exception",
+			"->v3",
+			"\\{\\n\\t",
+			"{\\n\\t",
+			" ",
+			" '",
+			"' ",
+			"\" \"",
+			">\\n",
+			"\\n",
+			">\\n",
+			"",
+			"fp.",
+			"BumpTrigger",
+			"",
+			"h2 class=\"feature\"",
+			"h2 class=\"feature\"\n",
+			"/h2\n",
+			"},\n",
+			"\n}",
+			"\n{",
+			":\n",
+			":\\n",
+			"\"statmod\"",
+			"{%blue}",
+			"{#red}{#bold}",
+			"{#black}",
+			"#",
+			"{#yellow}~{#reset}",
+			"{#yellow}",
+			"{%green}#{yellow}{#bold}~{#reset}{%reset}",
+			"{#green}%{#reset}",
+			"cyan",
+			"magenta",
+			"cyan",
+			"green",
+			"black",
+			"%",
+			",\\n",
+			"  {\\n",
+			"[\\n",
+			"[\\r",
+			"[\\n",
+			"[\\n\\r",
+			"[\\n",
+			"call(",
+			"@given",
+			"scope_while",
+			"B \\033[m",
+			"\\033",
+			"/",
+			"%",
+			"arcadia.",
+			"t",
+			"->go",
+			"o",
+			"\"",
+			"#fddab2",
+			"#fdaa4a",
+			"#fdc88b",
+			"CSSBlockProxy"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/ifps3/core.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5387,
+								5387
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/ifps3/util.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1110,
+								1110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/heh/core.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2385,
+								2385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 888.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/heh/core.cljs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/ifps3/cloud.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2266,
+								2266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 704.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/ifps3/data.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resources/public/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								328,
+								328
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "resources/public/css/std.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "scripts/figwheel.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 991,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "resources/public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1019,
+								1019
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				2
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.710699402604,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.787179487179,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ifps3.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"newdiv",
+				"coffee\\newdiv.coffee"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 165.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

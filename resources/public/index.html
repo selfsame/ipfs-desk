@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.33.min.js"></script>
+    <script src="js/libs/ipfsapi.min.js"></script>
+  </head>
+  <body ondrop="event.preventDefault()">
+    <div id="app">
+      <h2>Figwheel template</h2>
+      <p>Checkout your developer console.</p>
+    </div>
+    
+    <script type="text/javascript">
+
+var ipfs = window.ipfsAPI()
+
+function invertColor(hexTripletColor) {
+    var color = hexTripletColor;
+    color = color.substring(1);           // remove #
+    color = parseInt(color, 16);          // convert to integer
+    color = 0xFFFFFF ^ color;             // invert three bytes
+    color = color.toString(16);           // convert to hex
+    color = ("000000" + color).slice(-6); // pad with leading zeros
+    color = "#" + color;                  // prepend #
+    return color;
+}
+
+
+      document.addEventListener("dragover", function( event ) {
+      event.stopPropagation();
+      event.preventDefault();
+      });
+      document.addEventListener("drop", function( event ) {
+      event.stopPropagation();
+      event.preventDefault();
+      });
+
+    </script>
+    <script src="js/compiled/ifps3.js" type="text/javascript"></script>
+  </body>
+</html>
