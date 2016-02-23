@@ -10,4 +10,6 @@
   * start figwheel `lein run -m clojure.main --init scripts/figwheel.clj`
 
 
-*Drag files into the app to add them*
+_Drag files into the app to add them_
+
+![ipfs-dropping](https://cloud.githubusercontent.com/assets/2467644/13241805/9a97f05a-d9bc-11e5-9b84-980a80e71a9b.gif)
