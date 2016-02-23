@@ -65,7 +65,7 @@
 
 (def -attrs #{'onTouchMove 'onKeyDown 'onLoad 'onLoadedData 'onInput 'onChange 'onDragStart 'onDrop
               'onContextMenu 'onFocus 'href 'onClick 'onMouseUp 'onCut 'onMouseOut 'onTouchEnd 'onDrag
-              'onDragExit 'ref 'onDragEnter 'onTouchCancel 'value 'onSubmit 'onMouseDown 'onMouseEnter
+              'onDragExit 'ref 'onDragEnter 'onTouchCancel 'value 'defaultValue 'onSubmit 'onMouseDown 'onMouseEnter
               'type 'src 'onTouchStart 'onBlur 'onWheel 'onPaste 'onMouseMove 'onHover 'style 'onKeyUp
               'onMouseOver 'onKeyPress 'onDragOver 'onDragLeave 'draggable 'onDoubleClick 'id 'class
               'checked 'onMouseLeave 'onDragEnd 'onCopy 'onScroll 'target 'key})

@@ -61,14 +61,52 @@ div.sidebar {
   padding: 0em 0em 0em 0.5em;
 }
 
+div.sidebar > code {
+  width:100%;
+  clear:both;
+  float:left;
+}
+
+.selectable.schema {
+  background: #45CEC2;
+}
+
+.selectable.selected {
+  border: 2px solid black;
+}
+
 div.desktop {
   position:absolute;
   left:160px;
-  right: 0px;
+  right: 650px;
   top:0px;
   bottom:0px;
   padding:1em;
   overflow-y:scroll;
+}
+
+div.editor {
+  position:absolute;
+  right:0px;
+  width: 616px;
+  background:white;
+  top:0px;
+  bottom:0px;
+  padding:1em;
+  overflow-y:scroll;
+}
+
+.editor span.multi-value{
+  font-family: consolas;
+  font-size: 0.6em;
+  clear:both;
+  display:block;
+  width:50%;
+  padding-left:50%;
+}
+
+.editor input{
+  font-family:consolas;
 }
 
 .selectable {
@@ -391,14 +429,27 @@ background-color:transparent;
 .file{
 clear:both;
 font-size:10px;
-/*border-bottom: 1px black dashed;*/
 border-top: 1px gray dashed;
-/*background:gray;*/
 padding:.2em;
 padding-bottom:0em;
-font-size:24px;
+font-size:1em;
 box-sizing:border-box;
-margin:0em;}
+margin:0em;
+}
+
+.file .hotspot{
+  display:inline-block;
+  height:2.5em;
+  cursor:pointer;
+}
+
+.file .hotspot:hover{
+  /*background:#EEEEEE;*/
+}
+
+.file.selected{
+  background:#D4DA5F;
+}
 
 .file p{margin:0em 0em;
 width:100%;

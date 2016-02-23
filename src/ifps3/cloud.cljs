@@ -109,7 +109,7 @@
 
 (defn file-meta [file]
   {:name     (.-name file) 
-   :size (.-size file)
+   :size     (.-size file)
    :type     (.-type file)
    :modified (.toJSON (.-lastModifiedDate file))})
 

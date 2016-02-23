@@ -8,10 +8,10 @@
     [pdfn.core :refer [and* or* not* is*] :refer-macros [defpdfn pdfn]]
     [ifps3.data :as data]
     [ifps3.util :as util]
-    [ifps3.cloud :as cloud])
+    [ifps3.cloud :as cloud]
+    [cljs.pprint :as pprint])
   (:use 
-    [ifps3.util :only [clog ->edn edn-> put-local get-local format-bytes]]
-    [cljs.pprint :only [pprint]]))
+    [ifps3.util :only [clog ->edn edn-> put-local get-local format-bytes]]))
 
 (enable-console-print!)
 (set! om/*logger* nil)
@@ -29,6 +29,7 @@
 
 (defn read-local
   [{:keys [query ast state] :as env} k params]
+
     (if (om/ident? (:key ast))
       (get-in @state (:key ast))
       (om/db->tree query (get @state k) @state)))
@@ -38,7 +39,11 @@
 
 (pdfn read [env k params]
   (let [{:keys [state ast]} env]
-    {:value (read-local env k params)}))
+    (prn k (:ast env) (keys env))
+    (cond (= :prop (-> env :ast :type))
+      {:value (get @(:state env) k)}
+      :else 
+      {:value (read-local env k params)})))
 
 (pdfn read [env k params]
   {k #{:view}}
@@ -61,6 +66,10 @@
 (pdfn read [env k params]
   {k (is* :secret)}
   {:value (get-local "secret")})
+
+(pdfn read [env k params]
+  {k (is* :selection)}
+  {:value (get @(:state env) k)})
 
 (pdfn read [env k params]
   {k (is* :dags/by-id)}
@@ -148,26 +157,36 @@
 (def iphash (om/factory IPHash))
 
 
+(defn selected? [id] ((:selection @data/DATA) id))
+
+(defn toggle-selection [k]
+  (om/transact! reconciler `[(std/update-in ~{
+    :path [:selection] 
+    :fn (fn [col] (if (col k) (disj col k) (conj col k)))}) :selection]))
+
 (defui File
   static om/Ident
   (ident [this props]
     [:meta/by-id (:id props)])
   static om/IQuery
   (query [this] 
-    `[:id
-      :type])
+    `[:id :type])
   Object
   (render [this]
-    (let [props (om/props this)]
+    (let [props (om/props this)
+          id (:id props)
+          select {:path [:selection] :fn (fn [col] (if (col id) (disj col id) (conj col id)))}]
       (html
-        (<div
+        (<div.file
+          (class (if (selected? id) "selected" ""))
           (iphash {:value (:id props)})
-          (when (:thumbnail props)
-            (<img (src (:thumbnail props)) (style {:verticalAlign :middle})))
-          (:name props)
-          (<a "(link) " (href (str "https://ipfs.io/ipfs/" (:id props))) (target "_blank"))
-          (str (select-keys props [:size :type :modified]))
-          (style {:width 550}))))))
+          (<span.hotspot 
+            (onClick (fn [e] (om/transact! reconciler `[(std/update-in ~select) :selection])))
+            (when (:thumbnail props)
+              (<img (src (:thumbnail props)) (style {:verticalAlign :middle})))
+            (:name props)
+            (<a "(link) " (href (str "https://ipfs.io/ipfs/" (:id props))) (target "_blank"))
+            (str (select-keys props [:size :type :modified]))))))))
 (def file (om/factory File))
 
 
@@ -184,6 +203,44 @@
   ;TODO db/add by-id map instead of single v
   (om/transact! reconciler `[(db/add ~res) :folders/by-id])
   (cloud/save-data :meta/by-id :folders/by-id)))
+
+
+
+(defui DataEditor
+  Object
+  (render [this]
+    (let [props (om/props this)
+          [schema-id schema-spec] (:schema props)
+          selection (remove nil? (set (map #(get-in @data/DATA [:meta/by-id %]) (:selection props))))
+          validate (fn [scheme] 
+            (fn [e] (set! (.-value (.-target e)) 
+                          (data/validate! scheme (.. e -target -value)))))]
+    (html 
+      (<h3 (str schema-id))
+      (<pre (with-out-str (pprint/pprint schema-spec)))
+      (map 
+        (fn [[k v]] 
+          (let [values (vec (set (map k selection)))
+                best (first values)
+                other (rest values)
+                other? (pos? (count other))
+                locked ((or (get-in props [:schema/locked schema-id]) #{}) k)]
+          (if locked 
+            (<code (str k) (style {:color :white :background :gray :display :block}) 
+              (<span.right (prn-str best) (if other? "..") (style {:width "70%" :text-align :right :overflow :hidden})))
+            (<div (str k) (str locked)
+              (style {:background :silver}) 
+              (<input (defaultValue (str best)) (style {:float :right :width :50%})
+                (onBlur (validate v))
+                (onChange (validate v)))
+              (when other
+                    (<pre (style {:margin "0"})
+                      (<span.multi-value (interpose "\n" other))))))))
+        schema-spec)))))
+(def data-editor (om/factory DataEditor))
+
+
+
 
 (defn on-drop [e]
   (let [files (js->clj (.-files (.-dataTransfer e)))
@@ -204,7 +261,10 @@
   (query [this] 
     `[:meta/by-id
       :dags/by-id
+      :selection
       {:folders [:id :name]}
+      :schema/by-id
+      :schema/locked
       :view])
   Object
   (componentDidMount [this]
@@ -228,11 +288,14 @@
             (<h3 "local ipfs store")
             (<code "meta")(<br)
             (map 
-              #(<div.selectable.keyword (key (rand)) (<code (str %)) (onClick (view-set-fn %))) 
+              #(<div.selectable.keyword (key (rand)) 
+                (style {:display :inline-block :float :left :clear :both})
+                (<code (str %)) (onClick (view-set-fn %))) 
               [:meta/by-id :folders])
-
-            (<br)(<code "dags")
-            (map #(<span.selectable (key (rand)) (<br)
+            
+            (<code "dags")
+            (map #(<span.selectable (key (rand))
+                (style {:display :inline-block :float :left :clear :both})
                 (onClick (fn [e] (cloud/ifps-ls % normalize-dag)))
                 (iphash {:value %})) 
               (:dags/by-id props))
@@ -242,16 +305,31 @@
                 (onClick (view-set-fn [:folders (:id %)]))
                 (iphash {:value (:id %)})
                 (<code (:name %))) 
-                (vals (:folders props))))
-          
+                (vals (:folders props)))
+
+            (<br)(<code "schemas")(<br)
+            (map (fn [[k v]]
+              (<span.selectable.keyword.schema (key (rand))
+                (class (if (selected? k) "selected" ""))
+                (style {:display :inline-block :float :left :clear :both})
+                (onClick (fn [e] (toggle-selection k)))
+                (<code (str k))))
+                (:schema/by-id props)) )
+
           (<div.desktop
             (<div.info 
               (style {:fontSize 14 :background :orange :position :absolute
                 :left 8 :top 0 :right 0 :height "1.2em" })
               (str view))
-          (<pre (map file view-list))
-          (if (:over (om/get-state this)) 
-              (<div.filedrop "drop to add file")))))))))
+            (<pre (map file view-list))
+            (if (:over (om/get-state this)) 
+                (<div.filedrop "drop to add file")))
+          (<div.editor
+            (map (fn [[k v]]
+              (<div
+                (data-editor (conj props {:schema [k v]}))))
+            (filter (comp (:selection props) first) (:schema/by-id props)))
+            )))))))
 
 
 
@@ -259,7 +337,7 @@
 
 (defonce ^:private -populate
   (do (events/listen (.-body js/document) "keydown"
-        #(do (prn (.-keyCode %)) (swap! data/KEYS conj (.-keyCode %))))
+        #(do (identity (.-keyCode %)) (swap! data/KEYS conj (.-keyCode %))))
       (events/listen (.-body js/document) "keyup" 
         #(swap! data/KEYS disj (.-keyCode %)))))
 
