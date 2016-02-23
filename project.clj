@@ -6,8 +6,9 @@
                  [com.cognitect/transit-cljs "0.8.225" :scope "provided"]
                  [figwheel-sidecar "0.5.0-2" :scope "test"]
                  [org.omcljs/om "1.0.0-alpha26"]
+                 [org.clojure/core.async "0.2.371"]
                  [selfsame/dollar "0.0.9-SNAPSHOT"]
-                 [selfsame/pdf "0.0.9-SNAPSHOT"]]
+                 [selfsame/pdfn "1.0.1-SNAPSHOT"]]
 
   :plugins [[lein-cljsbuild "1.1.1"]]
 

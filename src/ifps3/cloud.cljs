@@ -1,12 +1,18 @@
 (ns ifps3.cloud
+  (:require-macros [cljs.core.async.macros :refer [go]])
   (:require 
     [om.next :as om :refer-macros [defui]]
+    [orbit.core :refer-macros [orbit de-orbit]]
+    [cljs.core.async :as async :refer [>! <! put! chan]]
+    [cljs.reader :as reader]
     [clojure.string :as string]
     [ifps3.data :as data])
   (:use 
-    [ifps3.util :only [clog ->edn edn-> put-local get-local root-ref]]
+    [ifps3.util :only [clog ->edn edn-> put-local get-local root-ref resize-dataurl]]
     [cljs.pprint :only [pprint]]))
 
+
+'[amazon s3 stuff]
 
 (def bucket "ifps3.selfsamegames.com")
 (def bucket-url "http://s3.amazonaws.com/ifps3.selfsamegames.com/")
@@ -24,7 +30,6 @@
             (when fail (fail e))))))
     (.open req "GET" url false)
     (.overrideMimeType req "text/xml; charset=iso-8859-1")
-    #_ (set! (.-responseType req) "arraybuffer")
     (.send req)))
 
 (defn aws-credentials []
@@ -72,7 +77,9 @@
        (if err (.log js/console err))
        (f res)))))
 
-
+(defn s3-exant? [uid f] 
+  (list-objects {"Prefix" uid}
+  #(if (first (get (js->clj %) "Contents")) (f true) (f false ))))
 
 (defn put-db []
   (put-object "dags/db" (->edn (:db @ifps3.data/DATA)) {}))
@@ -93,43 +100,38 @@
 
 
 
+
+
+
+
+'[ipfs.js stuff]
+
+
 (defn file-meta [file]
-  {:name     (.-name file) :size (.-size file)
+  {:name     (.-name file) 
+   :size (.-size file)
    :type     (.-type file)
    :modified (.toJSON (.-lastModifiedDate file))})
 
-(defn archive-file [file data meta]
-  (let [cb (fn [e]
-             (prn "put object")
-             (let [result (.-result (.-target e))]
-               (put-object (str "t/" (:uid meta)) result {"ContentType" (:type meta)}
-                 (fn [z] (do
-                           (prn "put confirm")
-                           (om/transact! (root-ref :uploads (:name meta)) #(conj % {:archived true}))
-                           (om/transact! (root-ref :db :meta) conj {(:uid meta) meta})
 
-                           )))))
-        reader (new js/FileReader)]
-    (aset reader "onload" cb)
-    (.readAsArrayBuffer reader file))
-  )
 
-(defn s3-exant? [uid f] 
-  (list-objects {"Prefix" uid}
-  #(if (first (get (js->clj %) "Contents")) (f true) (f false ))))
+(defn image? [s] (if (re-find #"^image" s) true false))
 
-(defn upload-status! [data v]
-  #_ (if (om/cursor? data)
-    (om/update! data [:archived] v)
-    (prn data)) )
+(def mime-matchers {
+  :gif #"^GIF"
+  :png #"�PNG"
+  :jpg #"����"
+  :bmp #"BM�"
+  :txt #"^"})
 
-(defn binary-file-loaded [file data meta]
-  "upload binary to db, if success update local db with uid:meta and commit"
-  (prn "read binary")
-  (s3-exant? (str "t/" (:uid meta))
-    #(if % (upload-status! (root-ref :uploads (:name meta)) true)
-           (archive-file file data meta))))
+(defn guess-mime [buffer]
+  (let [s (.substr (.toString buffer) 0 100)
+        found (first (first (filter (fn [[k v]] (re-find v s)) mime-matchers)))]
+    #_(prn 'guess-mime found s)
+    found))
 
+(defn buffer->data-image [buffer]
+  (str "data:image;base64," (.toString buffer "base64")))
 
 
 
@@ -160,17 +162,35 @@
         (.error js/console err)
         (f res)))))
 
+
+(defn image-loaded [e id]
+  (om/transact! @data/RECONCILER 
+    `[(std/update-in ~{:path [:meta/by-id id] 
+      :fn #(assoc % :thumbnail (resize-dataurl (.-result (.-target e)) 32 32))}) :Main])
+  (save-data :meta/by-id))
+
 (defn file-loaded [e file]
+  (clog #js [e file])
   (ifps-add 
     ((.-Buffer js/ipfs) (.-result (.-target e))) 
     (fn [res] 
-      (om/transact! @data/RECONCILER 
-        `[(db/add ~{(.-Hash res) (conj (file-meta file) {:type 2 :id (.-Hash res)})}) :Main])
-      (save-data :meta/by-id))))
-
+      (let [id (.-Hash res)]
+        (om/transact! @data/RECONCILER 
+          `[(std/update-in ~{:path [:meta/by-id id] :fn #(merge % (file-meta file) {:id id})}) :Main])
+        (if (image? (.-type file))
+            (let [reader (new js/FileReader)]
+              (aset reader "onload" #(do (image-loaded % id)))
+              (.readAsDataURL reader file))
+            (save-data :meta/by-id))))))
 
 (defn read-file [file]
   (let [reader (new js/FileReader)]
-    (clog (str "read-file " (.-type file)))
     (aset reader "onload" #(do (file-loaded % file)))
     (.readAsArrayBuffer reader file)))
+
+
+
+;(macroexpand '(orbit (+ 1 1)))
+;(prn (orbit (+ 1 1)))
+
+

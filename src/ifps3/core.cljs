@@ -5,8 +5,9 @@
     [om.dom :as dom]
     [heh.core :as heh :refer [private private!] :refer-macros [html]]
     [dollar.bill :as $ :refer [$]]
-    [pdf.core :refer [and* or* not*] :refer-macros [defpdf pdf]]
+    [pdfn.core :refer [and* or* not* is*] :refer-macros [defpdfn pdfn]]
     [ifps3.data :as data]
+    [ifps3.util :as util]
     [ifps3.cloud :as cloud])
   (:use 
     [ifps3.util :only [clog ->edn edn-> put-local get-local format-bytes]]
@@ -14,8 +15,6 @@
 
 (enable-console-print!)
 (set! om/*logger* nil)
-
-(defn is* [v] #(= v %))
 
 (defn render-count 
   ([this] (render-count this {}))
@@ -35,17 +34,17 @@
       (om/db->tree query (get @state k) @state)))
 
  
-(defpdf read)
+(defpdfn read)
 
-(pdf read [env k params]
+(pdfn read [env k params]
   (let [{:keys [state ast]} env]
     {:value (read-local env k params)}))
 
-(pdf read [env k params]
+(pdfn read [env k params]
   {k #{:view}}
   {:value (get-in @(:state env) [k])})
 
-(pdf read [env k params]
+(pdfn read [env k params]
   {k (or* (is* :meta/by-id))}
   (let [{:keys [state ast]} env
         local (get-in @state [k])]
@@ -53,17 +52,17 @@
     (if (= {} local)
         {:localStorage ast}))))
 
-(pdf read [env k params]
+(pdfn read [env k params]
   {k (is* :folders)}
   {:value (into {}
     (filter #(= 1 (:type (last %))) 
       (get-in @(:state env) [:meta/by-id])))})
 
-(pdf read [env k params]
+(pdfn read [env k params]
   {k (is* :secret)}
   {:value (get-local "secret")})
 
-(pdf read [env k params]
+(pdfn read [env k params]
   {k (is* :dags/by-id)}
   (let [{:keys [state ast]} env
          local (get-in @state [k])]
@@ -71,27 +70,31 @@
     (if (nil? local) {:s3 ast :localStorage ast}))))
 
 
-(defpdf mutate)
+(defpdfn mutate)
 
-(pdf mutate [env k props] {:action #()})
+(pdfn mutate [env k props] {:action #()})
 
-(pdf mutate [env k props]
+(pdfn mutate [env k props]
   {k (is* 'db/add)}
   {:action (fn [] (swap! (:state env) update-in [:meta/by-id] 
     #(conj % props)))})
 
-(pdf mutate [env k props]
+(pdfn mutate [env k props]
   {k (is* 'state/conj)}
   {:action (fn [] (swap! (:state env) #(conj % props)))})
 
 
-(defpdf send-query)
+(pdfn mutate [env k props]
+  {k (is* 'std/update-in)}
+  {:action (fn [] (swap! (:state env) update-in (:path props) (:fn props)))})
 
-(pdf send-query [k v cb]
+(defpdfn send-query)
+
+(pdfn send-query [k v cb]
   {k (is* :localStorage)}
   (cb (into {} (map #(vector % (edn-> (get-local (str %)))) v))))
 
-(pdf send-query [k v cb]
+(pdfn send-query [k v cb]
   {k (is* :s3)}
   (mapv (fn [fk] (cloud/get-object (str fk) 
     #(cb {fk (edn-> (.toString (.-Body %)))}))) v))
@@ -99,11 +102,11 @@
 (defn dispatch-send [q cb] (mapv (fn [[k v]] (send-query k v cb)) q))
 
 
-(defpdf merge-kv)
+(defpdfn merge-kv)
 
-(pdf merge-kv [k a b] [k (or b a)])
+(pdfn merge-kv [k a b] [k (or b a)])
 
-(pdf merge-kv [k a b]
+(pdfn merge-kv [k a b]
   {k (is* :dags/by-id)}
   [k (vec (set (concat a b)))])
 
@@ -155,20 +158,18 @@
       :type])
   Object
   (render [this]
-    (let [props (om/props this)
-          exit-url (str "https://ipfs.io/ipfs/" (:id props))]
+    (let [props (om/props this)]
       (html
         (<div
-          (iphash {:value (:id props)}) " "
-          (<a (href exit-url)   
-            "(link)"
-            #_(<img 
-              (style { :margin "0.3em" :maxHeight "4em" :verticalAlign :middle})
-              (src exit-url))
-            (target "_blank"))
-          "  " (:name props)
+          (iphash {:value (:id props)})
+          (when (:thumbnail props)
+            (<img (src (:thumbnail props)) (style {:verticalAlign :middle})))
+          (:name props)
+          (<a "(link) " (href (str "https://ipfs.io/ipfs/" (:id props))) (target "_blank"))
+          (str (select-keys props [:size :type :modified]))
           (style {:width 550}))))))
 (def file (om/factory File))
+
 
 (defn name->path [s] (map last (re-seq #"([^\\]+)[\\]*" s)))
 
@@ -177,13 +178,11 @@
 
 (defn normalize-dag [o]
   (let [o (js->clj o)
-        res (into {}
-    (map 
-      (comp #(vector (:id %) %) format-dag-obj)
-      (get-in o ["Objects" 0 "Links"])))]
+        res (into {} (map 
+              (comp #(vector (:id %) %) format-dag-obj)
+              (get-in o ["Objects" 0 "Links"])))]
   ;TODO db/add by-id map instead of single v
-  (om/transact! reconciler
-    `[(db/add ~res) :folders/by-id])
+  (om/transact! reconciler `[(db/add ~res) :folders/by-id])
   (cloud/save-data :meta/by-id :folders/by-id)))
 
 (defn on-drop [e]
@@ -199,29 +198,22 @@
 (defui Main
   static om/Ident
   (ident [this props] :Main)
-
   static om/IQueryParams
   (params [this] {})
-
   static om/IQuery
   (query [this] 
     `[:meta/by-id
       :dags/by-id
       {:folders [:id :name]}
       :view])
-
   Object
   (componentDidMount [this]
-    (clog this)
     (.addEventListener js/document "drop"
-      (fn [e] (on-drop e)
-              (om/set-state! this {:over false}) ))
+      (fn [e] (on-drop e) (om/set-state! this {:over false}) ))
     (.addEventListener js/window "dragenter"
-      (fn [e] (.stopPropagation e) (.preventDefault e)
-              (om/set-state! this  {:over true}) ))
+      (fn [e] (.stopPropagation e) (.preventDefault e) (om/set-state! this  {:over true}) ))
     (.addEventListener js/window "mouseout"
       (fn [e] (.preventDefault e))))
-
   (render [this]
     (let [props (om/props this)
           params (om/get-params this)]
@@ -251,6 +243,7 @@
                 (iphash {:value (:id %)})
                 (<code (:name %))) 
                 (vals (:folders props))))
+          
           (<div.desktop
             (<div.info 
               (style {:fontSize 14 :background :orange :position :absolute
@@ -285,4 +278,3 @@
 ;TODO [ ] use mime meta to show icons
 ;TODO [ ] create/edit/organize dags
 ;TODO [ ] selections and metadata editing
-
