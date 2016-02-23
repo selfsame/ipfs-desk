@@ -114,7 +114,6 @@
    :modified (.toJSON (.-lastModifiedDate file))})
 
 
-
 (defn image? [s] (if (re-find #"^image" s) true false))
 
 (def mime-matchers {
@@ -190,39 +189,20 @@
 
 
 
-;(macroexpand '(orbit (+ 1 1)))
-;(prn (orbit (+ 1 1)))
 
-(defn reverse-chars [s]
-  (-> s 
-  (clojure.string/replace #"[\\\/\(\)]" 
-    {"\\" "/" "/" "\\" "(" ")" ")" "(" })))
+
 
 (def cowsay 
   (fn [s] 
-    (let [s (str s)
-          lines (map (comp  first) (re-seq #"([^\n]+)" s))
-          c (or (apply max (cons 30 (map (comp count) lines))) 4)
-          s (apply str (flatten (interpose "\n" (map 
-            (comp  
-              
-              #(apply str %)
-              reverse
-              #(take c %)
-              seq
-              #(str % "              ")) 
-            lines))))]
-  (reverse-chars (print-str (apply str (flatten ["\n"
-    "\n " (take (+ c 2) (repeat "_")) " \n"
-    "/ " s " \\\n"
+    (let [s (str s) c (count s)] 
+      (print (apply str (flatten [
+"\n " (take (+ c 2) (repeat "_")) " \n" 
+"/ " s                          " \\\n" 
 "\\  " (take (+ c 0) (repeat "_")) "/
  \\/  ^__^        .,
-  \\  )oO)\\_______ \\     
+  \\  (oO)\\_______ \\     
      (__)\\       )/ 
       u  ||----w |  '.,
-         ||     ||  '_oO._"])))))))
-
-(print (cowsay (cowsay "helpme")))
-
+         ||     ||  '_oO._"]))))))
 
 (cowsay 'Qmb9ENuatepEEBuvgi3pzmuVqYUDVhEKQsXoNeA9vpeG8H)
