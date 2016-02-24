@@ -272,18 +272,18 @@
 			}
 		},
 		{
-			"file": "src/ifps3/core.cljs",
+			"file": "src/ifps3/data.cljs",
 			"settings":
 			{
-				"buffer_size": 11334,
+				"buffer_size": 1644,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/ifps3/util.cljs",
+			"file": "src/ifps3/core.cljs",
 			"settings":
 			{
-				"buffer_size": 1589,
+				"buffer_size": 11334,
 				"line_ending": "Windows"
 			}
 		}
@@ -795,7 +795,7 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -821,15 +821,45 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "src/ifps3/data.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1644,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ClojureScript/clojurescript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "src/ifps3/core.cljs",
 					"semi_transient": false,
 					"settings":
@@ -841,8 +871,8 @@
 						"selection":
 						[
 							[
-								5732,
-								5732
+								10752,
+								10798
 							]
 						],
 						"settings":
@@ -852,40 +882,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4576.0,
+						"translation.y": 4403.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/ifps3/util.cljs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								422,
-								422
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ClojureScript/clojurescript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
