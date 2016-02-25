@@ -143,7 +143,7 @@
 
 (defn load-data [& ks]
   (prn 'load-data)
-   (swap! data/DATA (fn [col] (merge-with conj col (into {} (map #(vector % (edn-> (get-local (str %)))) ks))))) ks)
+  (select-keys (swap! data/DATA (fn [col] (merge-with conj col (into {} (map #(vector % (edn-> (get-local (str %)))) ks))))) (vec ks)))
 
 (defn- ifps-fn 
   ([prop] (ifps-fn js/ipfs prop))
@@ -162,7 +162,7 @@
 
 
 
-(ifps-object-stat "QmeRU7cYk343KFrmQi9jGqz6oBdT92H6HwsTNHFTfFqtnj" (comp pprint/pprint js->clj))
+
 
 (defn remap-keys [table col]
   (reduce (fn [a k] 
@@ -177,17 +177,6 @@
   (pprint/pprint data)
   (om/transact! @data/RECONCILER `[(std/update-in ~{:path [:dags/by-id (:id data)] :fn #(merge % data)}) :Main])
   (save-data :dags/by-id)))
-
-(map (fn [[_ id]]
-  (ifps-object-stat id
-  (comp 
-    (fn [pre] (ifps-object-get id
-      (comp record-dag  #(apply merge (map js->clj [pre %])) )))))) 
-  (:dags @data/DATA))
-
-
-(def encode (ipjs QmQXtwcHQ6bmhXVFQfdjFfQfTxskFvZEPSJccQvsBWoPVY))
-(encode "<body>")
 
 (defn image-loaded [e id]
   (om/transact! @data/RECONCILER 
@@ -213,3 +202,18 @@
   (let [reader (new js/FileReader)]
     (aset reader "onload" #(do (file-loaded % file)))
     (.readAsArrayBuffer reader file)))
+
+'(
+
+(map (fn [[_ id]]
+  (ifps-object-stat id
+  (comp 
+    (fn [pre] (ifps-object-get id
+      (comp record-dag  #(apply merge (map js->clj [pre %])) )))))) 
+  (:dags @data/DATA))
+
+(ifps-object-stat "QmRAu8VntK1pXezu3J93UQvt3ero5sGSdfHsNZBcVny8KK" (comp pprint/pprint js->clj))
+(def encode (ipjs QmQXtwcHQ6bmhXVFQfdjFfQfTxskFvZEPSJccQvsBWoPVY))
+(encode "<body>")
+
+)

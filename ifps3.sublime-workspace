@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"ref",
-				"ref23587"
-			],
-			[
 				"make-",
 				"make-health-bar"
 			],
@@ -268,10 +264,37 @@
 	"buffers":
 	[
 		{
-			"file": "link-finder.html",
+			"contents": "Figwheel: Starting server at http://localhost:3449\nFigwheel: Watching build - dev\n[0mCompiling \"resources/public/js/compiled/ifps3.js\" from [\"src\"]...\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/core.cljs\nCompiling C:\\Users\\jparker\\Desktop\\PROJECTS\\joe\\dev\\ipfs-desk\\src\\ifps3\\data.cljs\nCompiling src\\ifps3\\util.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/selfsame/dollar/0.0.9-SNAPSHOT/dollar-0.0.9-SNAPSHOT.jar!/dollar/bill.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/com/cognitect/transit-cljs/0.8.225/transit-cljs-0.8.225.jar!/cognitect/transit.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/util.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/dom.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/core.cljs\nCompiling C:\\Users\\jparker\\Desktop\\PROJECTS\\joe\\dev\\ipfs-desk\\src\\ifps3\\cloud.cljs\nReading analysis cache for file:/C:/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/orbit/core.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/protocols.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/buffers.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/dispatch.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/channels.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/ioc_helpers.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/timers.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/string.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/pprint.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/cache.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/zip.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/impl/parser.cljc\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/protocols.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/tempid.cljc\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/walk.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/transit.cljc\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/reader.cljs\nCompiling src\\ifps3\\core.cljs\nReading analysis cache for file:/C:/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/heh/core.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/selfsame/pdfn/1.0.1-SNAPSHOT/pdfn-1.0.1-SNAPSHOT.jar!/pdfn/core.cljc\nCompiling target\\figwheel_temp\\dev\\figwheel\\connect.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/set.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/utils.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/file_reloading.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/repl.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/socket.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/heads_up.cljs\nReading analysis cache for jar:file:/C:/Users/jparker/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client.cljs\n[32mSuccessfully compiled \"resources/public/js/compiled/ifps3.js\" in 5.895 seconds.[0m\nFigwheel: Starting CSS Watcher for paths  [\"resources/public/css\"]\nLaunching ClojureScript REPL for build: dev\nFigwheel Controls:\n          (stop-autobuild)                ;; stops Figwheel autobuilder\n          (start-autobuild [id ...])      ;; starts autobuilder focused on optional ids\n          (switch-to-build id ...)        ;; switches autobuilder to different build\n          (reset-autobuild)               ;; stops, cleans, and starts autobuilder\n          (reload-config)                 ;; reloads build config and resets autobuild\n          (build-once [id ...])           ;; builds source one time\n          (clean-builds [id ..])          ;; deletes compiled cljs target files\n          (print-config [id ...])         ;; prints out build configurations\n          (fig-status)                    ;; displays current state of system\n  Switch REPL build focus:\n          :cljs/quit                      ;; allows you to switch REPL to another build\n    Docs: (doc function-name-here)\n    Exit: Control+C or :cljs/quit\n Results: Stored in vars *1, *2, *3, *e holds last exception object\nPrompt will show when Figwheel connects to your application\nTo quit, type: :cljs/quit\ncljs.user=> WARNING: Use of undeclared Var cljs.user/ifps-object-stat at line 2 <cljs repl>\nWARNING: Use of undeclared Var cljs.user/ifps-object-get at line 4 <cljs repl>\nWARNING: Use of undeclared Var cljs.user/record-dag at line 5 <cljs repl>\nWARNING: No such namespace: data, could not locate data.cljs, data.cljc, or Closure namespace \"\" at line 6 <cljs repl>\nWARNING: Use of undeclared Var data/DATA at line 6 <cljs repl>\n#object[ReferenceError ReferenceError: data is not defined]\ncljs.user=> Reading analysis cache for file:/C:/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/orbit/core.cljs\nReading analysis cache for file:/C:/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/orbit/core.cljs\nnil\nifps3.cloud=> nil\nifps3.cloud=> #'ifps3.cloud/encode\nifps3.cloud=> \"&lt;body&gt;\"\nifps3.cloud=> nil\nifps3.cloud=> nil\nifps3.cloud=> nil\nifps3.cloud=> nil\nifps3.cloud=> nil\nifps3.cloud=> (nil nil)\nifps3.cloud=> WARNING: No such namespace: cloud, could not locate cloud.cljs, cloud.cljc, or Closure namespace \"\" at line 1 <cljs repl>\nWARNING: Use of undeclared Var cloud/load-data at line 1 <cljs repl>\n#object[ReferenceError ReferenceError: cloud is not defined]\nifps3.cloud=> #'ifps3.cloud/record-dag\nifps3.cloud=> (nil nil)\nifps3.cloud=> (nil nil)\nifps3.cloud=> nil\nifps3.cloud=> nil\nifps3.cloud=> nil\nifps3.cloud=> WARNING: No such namespace: cloud, could not locate cloud.cljs, cloud.cljc, or Closure namespace \"\" at line 1 <cljs repl>\nWARNING: Use of undeclared Var cloud/load-data at line 1 <cljs repl>\n#object[ReferenceError ReferenceError: cloud is not defined]\nifps3.cloud=> nil\nifps3.core=> load-data\n(:dags/by-id)\nifps3.core=> load-data\n(:meta/by-id :dags/by-id)\nifps3.core=> load-data\n(:meta/by-id :dags/by-id)\n\nnil\nifps3.core=> nil\nifps3.util=> (format-bytes 846911)\n\"846.9Kb\"\nifps3.util=> WARNING: Use of undeclared Var ifps3.util/ifps-object-stat at line 2 <cljs repl>\nWARNING: Use of undeclared Var ifps3.util/ifps-object-get at line 4 <cljs repl>\nWARNING: Use of undeclared Var ifps3.util/record-dag at line 5 <cljs repl>\nWARNING: No such namespace: data, could not locate data.cljs, data.cljc, or Closure namespace \"\" at line 6 <cljs repl>\nWARNING: Use of undeclared Var data/DATA at line 6 <cljs repl>\n#object[ReferenceError ReferenceError: data is not defined]\nifps3.util=> Reading analysis cache for file:/C:/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/orbit/core.cljs\nReading analysis cache for file:/C:/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/orbit/core.cljs\nnil\nifps3.cloud=> (nil)\nifps3.cloud=> ",
 			"settings":
 			{
-				"buffer_size": 3241,
+				"buffer_size": 9129,
+				"line_ending": "Windows",
+				"name": "*REPL* [clojure]",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/ifps3/cloud.cljs",
+			"settings":
+			{
+				"buffer_size": 5738,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ifps3/data.cljs",
+			"settings":
+			{
+				"buffer_size": 1747,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/public/css/style.css",
+			"settings":
+			{
+				"buffer_size": 7937,
 				"line_ending": "Windows"
 			}
 		},
@@ -279,63 +302,16 @@
 			"file": "src/ifps3/core.cljs",
 			"settings":
 			{
-				"buffer_size": 11334,
+				"buffer_size": 11579,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "The system cannot find the path specified.\nFigwheel: Starting server at http://localhost:3449\nFigwheel: Watching build - dev\n[0mCompiling \"resources/public/js/compiled/ifps3.js\" from [\"src\"]...\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/core.cljs\nCompiling target\\figwheel_temp\\dev\\figwheel\\connect.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/util.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/dom.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/protocols.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/buffers.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/dispatch.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/channels.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/ioc_helpers.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/timers.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/core.cljs\nReading analysis cache for file:/C:/Users/jplur/Desktop/dev/ipfs-desk/src/heh/core.cljs\nReading analysis cache for file:/C:/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/data.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/selfsame/dollar/0.0.9-SNAPSHOT/dollar-0.0.9-SNAPSHOT.jar!/dollar/bill.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/string.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/pprint.cljs\nReading analysis cache for file:/C:/Users/jplur/Desktop/dev/ipfs-desk/src/orbit/core.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/cache.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/zip.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/impl/parser.cljc\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/protocols.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/tempid.cljc\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/walk.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/com/cognitect/transit-cljs/0.8.225/transit-cljs-0.8.225.jar!/cognitect/transit.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/transit.cljc\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/reader.cljs\nReading analysis cache for file:/C:/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/util.cljs\nReading analysis cache for file:/C:/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/cloud.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/selfsame/pdfn/1.0.1-SNAPSHOT/pdfn-1.0.1-SNAPSHOT.jar!/pdfn/core.cljc\nReading analysis cache for file:/C:/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/core.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/set.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/utils.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/file_reloading.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/repl.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/socket.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/heads_up.cljs\nReading analysis cache for jar:file:/C:/Users/jplur/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client.cljs\n[32mSuccessfully compiled \"resources/public/js/compiled/ifps3.js\" in 2.9 seconds.[0m\nFigwheel: Starting CSS Watcher for paths  [\"resources/public/css\"]\nLaunching ClojureScript REPL for build: dev\nFigwheel Controls:\n          (stop-autobuild)                ;; stops Figwheel autobuilder\n          (start-autobuild [id ...])      ;; starts autobuilder focused on optional ids\n          (switch-to-build id ...)        ;; switches autobuilder to different build\n          (reset-autobuild)               ;; stops, cleans, and starts autobuilder\n          (reload-config)                 ;; reloads build config and resets autobuild\n          (build-once [id ...])           ;; builds source one time\n          (clean-builds [id ..])          ;; deletes compiled cljs target files\n          (print-config [id ...])         ;; prints out build configurations\n          (fig-status)                    ;; displays current state of system\n  Switch REPL build focus:\n          :cljs/quit                      ;; allows you to switch REPL to another build\n    Docs: (doc function-name-here)\n    Exit: Control+C or :cljs/quit\n Results: Stored in vars *1, *2, *3, *e holds last exception object\nPrompt will show when Figwheel connects to your application\nTo quit, type: :cljs/quit\ncljs.user=> ",
-			"settings":
-			{
-				"buffer_size": 6670,
-				"line_ending": "Windows",
-				"name": "*REPL* [clojure]",
-				"scratch": true
-			}
-		},
-		{
-			"contents": "QmQcXcT2NAzEKc7odtVt7wkUiBcoBlpauZTpjnrFDshP1g",
-			"settings":
-			{
-				"buffer_size": 46,
-				"line_ending": "Windows",
-				"name": "QmQcXcT2NAzEKc7odtVt7wkUiBcoBlpauZTpjnrFDshP1g"
 			}
 		}
 	],
-	"build_system": "Packages/PackageDev/Support/Convert to ....sublime-build",
+	"build_system": "",
 	"build_system_choices":
 	[
-		[
-			[
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					""
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"JSON"
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"Property List"
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"YAML (Block Style)"
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"YAML (Default Style)"
-				]
-			],
-			[
-				"Packages/PackageDev/Support/Convert to ....sublime-build",
-				"Property List"
-			]
-		]
 	],
-	"build_varint": "Property List",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 119.0,
@@ -395,7 +371,7 @@
 	},
 	"console":
 	{
-		"height": 139.0,
+		"height": 233.0,
 		"history":
 		[
 			"view.run_command(\"expand_selection\", {\"to\": \"word\"})",
@@ -444,33 +420,26 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/jplur/Desktop/dev/ipfs-desk",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/heh",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3"
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources/public",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources/public/css",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/ifps3",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/orbit"
 	],
 	"file_history":
 	[
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/heh/core.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/core.cljs",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/clojurescript.sublime-settings",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.sublime-settings",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/test.cljs",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/clojure-cool.YAML-tmTheme",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/data.cljs",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/clojure-cool.tmTheme",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/figwheel.bat",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/README.md",
-		"/C/Users/jplur/Desktop/dev/final/src/sync/mouse.cljs",
-		"/C/Users/jplur/Desktop/dev/final/src/sync/keys.cljs",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/project.clj",
-		"/C/Users/jplur/Desktop/dev/final/project.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit/core.cljs",
-		"/C/Users/jplur/Desktop/dev/learnnext/src/learnnext/core.cljs",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public/index.html",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/scripts/figwheel.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public/css/style.css",
+		"/C/Users/jparker/Desktop/om.html",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/final/scripts/figwheel.clj",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/ifps3/core.cljs",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources/public/css/style.css",
+		"/C/Users/jparker/AppData/Roaming/Sublime Text 3/Packages/User/Scala.sublime-settings",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/heh/core.clj",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/ifps3/util.cljs",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/ifps3/data.cljs",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/scripts/figwheel.clj",
+		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources/public/index.html",
 		"/C/Users/jplur/Desktop/oisjfd.gif",
 		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/css/style.css",
 		"/C/Users/jplur/Desktop/dev/ifps3/scripts/figwheel.clj",
@@ -530,6 +499,7 @@
 		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/meta.txt",
 		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/imgmeta.py",
 		"/C/Users/jplur/Desktop/giflife.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/dense/core.cljs",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/impl.cljc",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/core.cljs",
@@ -578,7 +548,16 @@
 		"/C/Users/jplur/Desktop/Vault (D) - Shortcut.lnk",
 		"/D/Blender/BlackIsle/New folder/04 CFNM GIFs/index.html",
 		"/C/Users/jplur/work/dev/final/src/comp/interface.cljs",
-		"/C/Users/jplur/work/dev/final/src/comp/dialogue.cljs"
+		"/C/Users/jplur/work/dev/final/src/comp/dialogue.cljs",
+		"/C/Users/jplur/work/dev/final/src/fp/final.cljs",
+		"/C/Users/jplur/work/dev/final/src/comp/filebrowser.cljs",
+		"/C/Users/jplur/work/dev/final/resources/public/css/style-widgets.css",
+		"/C/Users/jplur/Desktop/dev/selenica/src/selenica/core.cljs",
+		"/C/Users/jplur/work/dev/final/src/money/core.cljs",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/text_transfer.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojurescript.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings"
 	],
 	"find":
 	{
@@ -620,15 +599,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"val",
-			"string",
-			"backgr",
-			"background",
-			"normalize-dag",
-			"415px",
-			"reconciler",
-			"pdf",
-			"guess-mime",
+			"pprint",
+			"prn",
+			".file",
+			"file",
 			"prn",
 			"event",
 			"EventType",
@@ -747,7 +721,12 @@
 			"click-mode-option",
 			"UID",
 			"alter-class-string",
-			":_m"
+			":_m",
+			"parts",
+			"guid",
+			"KEYS-DOWN",
+			"MOUSE-DOWN-POS",
+			"NO-UPDATE"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -755,7 +734,6 @@
 		"regex": true,
 		"replace_history":
 		[
-			"pdfn",
 			"Exception",
 			"->v3",
 			"\\{\\n\\t",
@@ -832,91 +810,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "link-finder.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3241,
+						"buffer_size": 9129,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1488,
-								1488
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 490.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/ifps3/core.cljs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11334,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10269,
-								10269
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4650.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6670,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6670,
-								6670
+								8366,
+								8345
 							]
 						],
 						"settings":
 						{
 							"auto_complete": true,
 							"auto_indent": false,
-							"color_scheme": "Packages/User/Color Highlighter/themes/clojure-dark.tmTheme",
 							"detect_indentation": false,
 							"gutter": false,
 							"history_arrows": true,
@@ -924,7 +835,7 @@
 							"line_numbers": false,
 							"repl": true,
 							"repl_external_id": "clojure",
-							"repl_id": "cafec556b0674f48b519d82d10b8f64f",
+							"repl_id": "526af91065d942358d70f79c70b8bc22",
 							"repl_restart_args":
 							{
 								"cmd":
@@ -972,38 +883,70 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 810.0,
+						"translation.y": 1333.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 1,
+					"file": "src/ifps3/cloud.cljs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 46,
+						"buffer_size": 5738,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46,
-								46
+								4690,
+								4690
 							]
 						],
 						"settings":
 						{
-							"auto_name": "QmQcXcT2NAzEKc7odtVt7wkUiBcoBlpauZTpjnrFDshP1g",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/ifps3/data.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1073,
+								1073
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ClojureScript/clojurescript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1011,13 +954,79 @@
 					},
 					"stack_index": 3,
 					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/public/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7937,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1371,
+								1371
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Dark).tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 619.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/ifps3/core.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1383,
+								1383
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1031,31 +1040,31 @@
 				0,
 				0,
 				1,
-				2
+				1
 			],
 			[
 				1,
 				0,
 				2,
-				1
+				2
 			],
 			[
+				0,
 				1,
 				1,
-				2,
 				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.646868423198,
+			0.294948629721,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.341491841492,
+			0.389452332657,
 			1.0
 		]
 	},
@@ -1064,15 +1073,11 @@
 	{
 		"height": 0.0
 	},
-	"output.package_dev":
-	{
-		"height": 92.0
-	},
-	"pinned_build_system": "Packages/PackageDev/Support/Convert to ....sublime-build",
+	"pinned_build_system": "",
 	"project": "ifps3.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1106,7 +1111,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1114,7 +1119,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 223.0,
+	"side_bar_width": 165.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

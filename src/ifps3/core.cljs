@@ -37,7 +37,7 @@
 
 (pdfn read [env k params]
   (let [{:keys [state ast]} env]
-    ;(prn k (:ast env) (keys env))
+    (prn k (:ast env) (keys env))
     (cond (= :prop (-> env :ast :type))
       {:value (get @(:state env) k)}
       :else 
@@ -56,12 +56,6 @@
         {:localStorage ast} {}))))
 
 (pdfn read [env k params]
-  {k (is* :folders)}
-  {:value (into {}
-    (filter #(= 1 (:type (last %))) 
-      (get-in @(:state env) [:meta/by-id])))})
-
-(pdfn read [env k params]
   {k (is* :secret)}
   {:value (get-local "secret")})
 
@@ -72,6 +66,8 @@
 (pdfn read [env k params]
   {k (is* :dags)}
   (let [{:keys [state ast query]} env]
+    ;TODO local and remote
+    (prn (get @state k) (map (comp (:dags/by-id @state) last) (get @state k)))
   {:value (om/db->tree query (get @state k) @state)}))
 
 
@@ -128,7 +124,7 @@
   :send dispatch-send
   :merge-tree dispatch-merge}))
 
-(cloud/load-data :meta/by-id)
+(cloud/load-data :meta/by-id :dags/by-id)
 
 (reset! data/RECONCILER reconciler)
 
@@ -138,7 +134,7 @@
   (render [this]
     (let [s (:value (om/props this))
           [a b] (mapv (comp #(.toString % 16) #(.abs js/Math %) hash) 
-                      (re-seq #"[a-zA-Z0-9]{23}" s))]
+                      (re-seq #"[a-zA-Z0-9]{23}" (str s)))]
     (html 
       (<span.ipfs
         (style {:border (str "0.2em solid #" (apply str (take 6 a)))}) 
@@ -178,11 +174,11 @@
           (iphash {:value (:id props)})
           (<span.hotspot 
             (onClick (fn [e] (om/transact! reconciler `[(std/update-in ~select) :selection])))
-            (when (:thumbnail props)
+            #_(when (:thumbnail props)
               (<img (src (:thumbnail props)) (style {:verticalAlign :middle})))
-            (:name props)
-            (<a "(link) " (href (str "https://ipfs.io/ipfs/" (:id props))) (target "_blank"))
-            (str (select-keys props [:size :type :modified]))))))))
+            (<span.record (:name props))
+            (<span.record (last (.split (str (:type props)) "/")))
+            (<span.record.right (ifps3.util/format-bytes (:size props)))))))))
 (def file (om/factory File))
 
 
@@ -236,6 +232,28 @@
 (def data-editor (om/factory DataEditor))
 
 
+(defui Dag
+  static om/Ident
+  (ident [this props]
+    [:dags/by-id (:id props)])
+  static om/IQuery
+  (query [this] 
+    `[:id :links])
+  Object
+  (render [this]
+    (let [props (om/props this)
+          id (:id props)
+          select {:path [:selection] :fn (fn [col] (if (col id) (disj col id) (conj col id)))}]
+      (html
+        (<div.dag
+          (class (if (selected? id) "selected" ""))
+          (iphash {:value (:id props)})
+          (<span.hotspot) 
+            (onClick (fn [e] (om/transact! reconciler `[(std/update-in ~select) :selection])))
+            (<div (style {:padding-left :1em})
+              (map #(<pre (iphash {:value (get % "Hash")})(get % "Name"))
+                (:links props))))))))
+(def dag (om/factory Dag))
 
 
 (defn on-drop [e]
@@ -256,9 +274,8 @@
   static om/IQuery
   (query [this] 
     `[:meta/by-id
-      {:dags [:id :links]}
+      {:dags ~(om/get-query Dag) }
       :selection
-      {:folders [:id :name]}
       :schema/by-id
       :schema/locked
       :view])
@@ -282,27 +299,15 @@
           (render-count this)
           (<div.sidebar 
             (<h3 "local ipfs store")
-            (<code "meta")(<br)
+            (<code "meta stores")(<br)
             (map 
               #(<div.selectable.keyword (key %) 
                 (style {:display :inline-block :float :left :clear :both})
                 (<code (str %)) (onClick (view-set-fn %))) 
-              [:meta/by-id :folders])
+              [:meta/by-id])
             
-            (<code "dags")
-            (map #(<span.selectable (key (:id %))
-                (style {:display :inline-block :float :left :clear :both})
-                ;(onClick (fn [e] (prn "?")))
-                (iphash {:value (:id %)})
-                ) 
-              (:dags props))
 
-            (<br)(<code "folders")
-            (map #(<span.selectable (key (rand)) (<br)
-                (onClick (view-set-fn [:folders (:id %)]))
-                (iphash {:value (:id %)})
-                (<code (:name %))) 
-                (vals (:folders props)))
+
 
             (<br)(<code "schemas")(<br)
             (map (fn [[k v]]
@@ -311,7 +316,13 @@
                 (style {:display :inline-block :float :left :clear :both})
                 (onClick (fn [e] (toggle-selection k)))
                 (<code (str k))))
-                (:schema/by-id props)) )
+                (:schema/by-id props))
+
+            (<code "dags")
+            (map #(<span.selectable (key (:id %))
+                (style {:display :inline-block :float :left :clear :both})
+                (dag %)) 
+              (:dags props)) )
 
           (<div.desktop
             (<div.info 
