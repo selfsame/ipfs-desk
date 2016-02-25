@@ -29,17 +29,15 @@
 
 (defn read-local
   [{:keys [query ast state] :as env} k params]
-
     (if (om/ident? (:key ast))
       (get-in @state (:key ast))
       (om/db->tree query (get @state k) @state)))
-
  
 (defpdfn read)
 
 (pdfn read [env k params]
   (let [{:keys [state ast]} env]
-    (prn k (:ast env) (keys env))
+    ;(prn k (:ast env) (keys env))
     (cond (= :prop (-> env :ast :type))
       {:value (get @(:state env) k)}
       :else 
@@ -50,12 +48,12 @@
   {:value (get-in @(:state env) [k])})
 
 (pdfn read [env k params]
-  {k (or* (is* :meta/by-id))}
+  {k (is* :meta/by-id)}
   (let [{:keys [state ast]} env
         local (get-in @state [k])]
   (merge {:value local}
     (if (= {} local)
-        {:localStorage ast}))))
+        {:localStorage ast} {}))))
 
 (pdfn read [env k params]
   {k (is* :folders)}
@@ -72,11 +70,9 @@
   {:value (get @(:state env) k)})
 
 (pdfn read [env k params]
-  {k (is* :dags/by-id)}
-  (let [{:keys [state ast]} env
-         local (get-in @state [k])]
-  (merge {:value local}
-    (if (nil? local) {:s3 ast :localStorage ast}))))
+  {k (is* :dags)}
+  (let [{:keys [state ast query]} env]
+  {:value (om/db->tree query (get @state k) @state)}))
 
 
 (defpdfn mutate)
@@ -116,12 +112,14 @@
 (pdfn merge-kv [k a b] [k (or b a)])
 
 (pdfn merge-kv [k a b]
-  {k (is* :dags/by-id)}
+  {k (is* 'no #_:dags/by-id)}
   [k (vec (set (concat a b)))])
 
 (defn dispatch-merge [a b]
   (into {} (mapv (fn [k] (merge-kv k (get a k) (get b k)))   
     (set (concat (keys a) (keys b))))))
+
+
 
 (def reconciler (om/reconciler {
   :state data/DATA 
@@ -130,11 +128,9 @@
   :send dispatch-send
   :merge-tree dispatch-merge}))
 
+(cloud/load-data :meta/by-id)
+
 (reset! data/RECONCILER reconciler)
-
-
-
-
 
 
 (defui IPHash
@@ -260,7 +256,7 @@
   static om/IQuery
   (query [this] 
     `[:meta/by-id
-      :dags/by-id
+      {:dags [:id :links]}
       :selection
       {:folders [:id :name]}
       :schema/by-id
@@ -288,17 +284,18 @@
             (<h3 "local ipfs store")
             (<code "meta")(<br)
             (map 
-              #(<div.selectable.keyword (key (rand)) 
+              #(<div.selectable.keyword (key %) 
                 (style {:display :inline-block :float :left :clear :both})
                 (<code (str %)) (onClick (view-set-fn %))) 
               [:meta/by-id :folders])
             
             (<code "dags")
-            (map #(<span.selectable (key (rand))
+            (map #(<span.selectable (key (:id %))
                 (style {:display :inline-block :float :left :clear :both})
-                (onClick (fn [e] (cloud/ifps-ls % normalize-dag)))
-                (iphash {:value %})) 
-              (:dags/by-id props))
+                ;(onClick (fn [e] (prn "?")))
+                (iphash {:value (:id %)})
+                ) 
+              (:dags props))
 
             (<br)(<code "folders")
             (map #(<span.selectable (key (rand)) (<br)
@@ -342,7 +339,7 @@
         #(swap! data/KEYS disj (.-keyCode %)))))
 
 ;(pprint (:folders/by-id @(om/app-state reconciler)))
-;(cloud/ifps-ls "QmSVPzx65kWgq63vokQR937RSusm979n1cqNSDhCCKYAD1" normalize-dag)
+
 #_(put-local ":dags/by-id" (->edn ["QmTyijkMMBPxdcM853nmzhrWQLMxZLWH1Z1LxUe5QiTSK5" 
   "QmPki1KPEa59Xwyw3uUJ232t77DQ8QRVzJcRkUgcy1Wq9t"
   "QmaDs3XVVM19BwTAAqQcz1fPWhqTM1qhtrY2ZN68rjudyz"

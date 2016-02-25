@@ -1,0 +1,1 @@
+(function(a){b=document.createElement('a');b.innerHTML=a;return b.textContent;})

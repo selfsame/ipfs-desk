@@ -2,7 +2,7 @@
 
 (def KEYS (atom #{}))
 
-(def RECONCILER (atom nil))
+(defonce RECONCILER (atom nil))
 
 (defn link? [s] (and 
 	(string? s)
@@ -35,6 +35,10 @@
 
 (defonce DATA (atom 
   {:meta/by-id {}
+   :dags/by-id {}
+   :dags [
+      [:dags/by-id "QmTyijkMMBPxdcM853nmzhrWQLMxZLWH1Z1LxUe5QiTSK5"]
+      [:dags/by-id "QmNxT6GsQR9qri73Xy9rZpQNqfSkxpveudjZAfPk3ujurT"]]
    :schema/by-id {
    	:std {
       :size :integer? 

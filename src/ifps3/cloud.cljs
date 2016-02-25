@@ -2,14 +2,15 @@
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require 
     [om.next :as om :refer-macros [defui]]
-    [orbit.core :refer-macros [orbit de-orbit]]
+    [orbit.core :refer-macros [orbit de-orbit ipjs]]
     [cljs.core.async :as async :refer [>! <! put! chan]]
+    [cljs.pprint :as pprint]
     [cljs.reader :as reader]
     [clojure.string :as string]
     [ifps3.data :as data])
   (:use 
     [ifps3.util :only [clog ->edn edn-> put-local get-local root-ref resize-dataurl]]
-    [cljs.pprint :only [pprint]]))
+    ))
 
 
 '[amazon s3 stuff]
@@ -88,7 +89,7 @@
   (ajax-get (str bucket-url "dags/db") 
     (fn [e] 
       (swap! ifps3.data/DATA conj {:db (edn-> e)})
-      (pprint (:db @ifps3.data/DATA)) )
+      (pprint/pprint (:db @ifps3.data/DATA)) )
     (fn [e] (put-object "dags/db" (->edn {}) {}))))
 
 
@@ -133,34 +134,60 @@
   (str "data:image;base64," (.toString buffer "base64")))
 
 
-
 (defn save-data [& ks]
+  (prn 'save-data ) 
   (mapv 
     (fn [k] (let [data (get @(om.next/app-state @data/RECONCILER) k)]
       (put-local (str k) (->edn data))))
-    ks))
+    ks) ks)
 
-(defn ifps-add [data f]
-  (.add js/ipfs data
-    (fn [err res]
-      (if (or err (not res))
-        (.error js/console err)
-        (f res)))))
+(defn load-data [& ks]
+  (prn 'load-data)
+   (swap! data/DATA (fn [col] (merge-with conj col (into {} (map #(vector % (edn-> (get-local (str %)))) ks))))) ks)
 
-(defn ifps-cat [data f]
-  (.cat js/ipfs data
-    (fn [err res]
-      (if (or err (not res))
-        (.error js/console err)
-        (f res)))))
+(defn- ifps-fn 
+  ([prop] (ifps-fn js/ipfs prop))
+  ([root prop]
+    (fn [data f]
+      ((aget root prop) data
+        (fn [err res]
+          (if (or err (not res))
+            (.error js/console err)
+            (f res)))))))
 
-(defn ifps-ls [data f]
-  (.ls js/ipfs data
-    (fn [err res]
-      (if (or err (not res))
-        (.error js/console err)
-        (f res)))))
+(def ifps-add (ifps-fn "add"))
+(def ifps-cat (ifps-fn "cat"))
+(def ifps-object-stat (ifps-fn (.-object js/ipfs) "stat"))
+(def ifps-object-get (ifps-fn (.-object js/ipfs) "get"))
 
+
+
+(ifps-object-stat "QmeRU7cYk343KFrmQi9jGqz6oBdT92H6HwsTNHFTfFqtnj" (comp pprint/pprint js->clj))
+
+(defn remap-keys [table col]
+  (reduce (fn [a k] 
+    (if-let [n (get table k)] 
+      (assoc (dissoc a k) n (get a k))
+      a)) col (keys col)))
+
+
+(defn record-dag [res]
+  (let [data (remap-keys {"Hash" :id "Links" :links "CumulativeSize" :cumulative-size} res)
+        data (select-keys data [:id :links :cumulative-size])]
+  (pprint/pprint data)
+  (om/transact! @data/RECONCILER `[(std/update-in ~{:path [:dags/by-id (:id data)] :fn #(merge % data)}) :Main])
+  (save-data :dags/by-id)))
+
+(map (fn [[_ id]]
+  (ifps-object-stat id
+  (comp 
+    (fn [pre] (ifps-object-get id
+      (comp record-dag  #(apply merge (map js->clj [pre %])) )))))) 
+  (:dags @data/DATA))
+
+
+(def encode (ipjs QmQXtwcHQ6bmhXVFQfdjFfQfTxskFvZEPSJccQvsBWoPVY))
+(encode "<body>")
 
 (defn image-loaded [e id]
   (om/transact! @data/RECONCILER 
@@ -186,23 +213,3 @@
   (let [reader (new js/FileReader)]
     (aset reader "onload" #(do (file-loaded % file)))
     (.readAsArrayBuffer reader file)))
-
-
-
-
-
-
-(def cowsay 
-  (fn [s] 
-    (let [s (str s) c (count s)] 
-      (print (apply str (flatten [
-"\n " (take (+ c 2) (repeat "_")) " \n" 
-"/ " s                          " \\\n" 
-"\\  " (take (+ c 0) (repeat "_")) "/
- \\/  ^__^        .,
-  \\  (oO)\\_______ \\     
-     (__)\\       )/ 
-      u  ||----w |  '.,
-         ||     ||  '_oO._"]))))))
-
-(cowsay 'Qmb9ENuatepEEBuvgi3pzmuVqYUDVhEKQsXoNeA9vpeG8H)

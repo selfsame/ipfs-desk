@@ -1,0 +1,1 @@
+(function(a){return document.createElement('a').appendChild(document.createTextNode(a)).parentNode.innerHTML;})
