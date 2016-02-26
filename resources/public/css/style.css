@@ -54,7 +54,7 @@ span.ipfs .hash{
 div.sidebar {
   position:absolute;
   left:0px;
-  width: 360px;
+  width: 160px;
   top:0px;
   bottom:0px;
   font-family:verdana;
@@ -79,7 +79,7 @@ div.sidebar > code {
 
 div.desktop {
   position:absolute;
-  left:360px;
+  left:160px;
   right: 250px;
   top:0px;
   bottom:0px;

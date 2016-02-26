@@ -8,6 +8,7 @@
     [pdfn.core :refer [and* or* not* is*] :refer-macros [defpdfn pdfn]]
     [ifps3.data :as data]
     [ifps3.util :as util]
+    [ipfs.core]
     [ifps3.cloud :as cloud]
     [cljs.pprint :as pprint])
   (:use 
@@ -97,7 +98,7 @@
 
 (pdfn send-query [k v cb]
   {k (is* :s3)}
-  (mapv (fn [fk] (cloud/get-object (str fk) 
+  (mapv (fn [fk] #_(cloud/get-object (str fk) 
     #(cb {fk (edn-> (.toString (.-Body %)))}))) v))
 
 (defn dispatch-send [q cb] (mapv (fn [[k v]] (send-query k v cb)) q))
@@ -251,7 +252,7 @@
           (<span.hotspot) 
             (onClick (fn [e] (om/transact! reconciler `[(std/update-in ~select) :selection])))
             (<div (style {:padding-left :1em})
-              (map #(<pre (iphash {:value (get % "Hash")})(get % "Name"))
+              (map #(<pre (iphash {:value (get % "Hash")})#_(get % "Name"))
                 (:links props))))))))
 (def dag (om/factory Dag))
 
@@ -292,8 +293,11 @@
           params (om/get-params this)]
     (let [view (:view props)
           ;TODO less bad
+
           view-list (cond (keyword? view) (vals (view props))
-                          (vector? view) [(get-in props view)])]
+                          (vector? view) [(get-in props view)]
+                          :else [])]
+      (pprint/pprint view)
       (html
         (<div.app
           (render-count this)
@@ -321,6 +325,7 @@
             (<code "dags")
             (map #(<span.selectable (key (:id %))
                 (style {:display :inline-block :float :left :clear :both})
+                (onClick (view-set-fn %))
                 (dag %)) 
               (:dags props)) )
 

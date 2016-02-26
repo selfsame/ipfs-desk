@@ -13,100 +13,6 @@
     ))
 
 
-'[amazon s3 stuff]
-
-(def bucket "ifps3.selfsamegames.com")
-(def bucket-url "http://s3.amazonaws.com/ifps3.selfsamegames.com/")
-(def region "us-east-1")
-(def access-key "AKIAJMSYCISSQMTCJXQQ")
-(def path-separator "%5C/")
-
-(defn ajax-get [url f fail]
-  (when-let [req (new js/XMLHttpRequest)]
-    (set! (.-onreadystatechange req)
-      (fn [e] 
-        (if (= 4 (.-readyState req))
-          (if (= 200 (.-status req)) 
-            (f (.. e -target -response))
-            (when fail (fail e))))))
-    (.open req "GET" url false)
-    (.overrideMimeType req "text/xml; charset=iso-8859-1")
-    (.send req)))
-
-(defn aws-credentials []
-  (.update (.-config js/AWS)
-    #js {"accessKeyId" access-key
-         "secretAccessKey" (get-local "secret") }))
-
-(def S3 (.-S3 js/AWS))
-(defn s3 [] (S3. #js {"region" region, "maxRetries" 15}))
-
-(aws-credentials)
-
-(defn get-object
-  ([k] (get-object k #()))
-  ([k f]
-   (.getObject (s3)
-     #js {"Bucket" bucket "Key" k}
-     (fn [err res]
-       (if err (do (.log js/console [err])))
-       (if res (f res))))))
-
-(defn list-objects
-  ([f] (list-objects {} f))
-  ([opts f]
-   (.listObjects (s3)
-     (clj->js (conj  {"Bucket" bucket } opts))
-     (fn [err res]
-       (if err (do (.log js/console err)))
-       (if res (f res))))))
-
-(defn delete-object
-  ([k f]
-   (.deleteObject (s3)
-     #js {"Bucket" bucket "Key" k}
-     (fn [err res]
-       (if err (.log js/console err))
-       (if res (f res))))))
-
-(defn put-object
-  ([k v opts] (put-object k v opts #()))
-  ([k v opts f]
-   (.putObject (s3)
-     (clj->js (conj {"Bucket" bucket "Key" k "Body" v "ACL" "public-read"} opts))
-     (fn [err res]
-       (if err (.log js/console err))
-       (f res)))))
-
-(defn s3-exant? [uid f] 
-  (list-objects {"Prefix" uid}
-  #(if (first (get (js->clj %) "Contents")) (f true) (f false ))))
-
-(defn put-db []
-  (put-object "dags/db" (->edn (:db @ifps3.data/DATA)) {}))
-
-(defn get-db []
-  (ajax-get (str bucket-url "dags/db") 
-    (fn [e] 
-      (swap! ifps3.data/DATA conj {:db (edn-> e)})
-      (pprint/pprint (:db @ifps3.data/DATA)) )
-    (fn [e] (put-object "dags/db" (->edn {}) {}))))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'[ipfs.js stuff]
-
 
 (defn file-meta [file]
   {:name     (.-name file) 
@@ -217,3 +123,6 @@
 (encode "<body>")
 
 )
+
+
+
