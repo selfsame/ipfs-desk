@@ -37,7 +37,7 @@
   {:meta/by-id {}
    :dags/by-id {}
    :dags [
-      [:dags/by-id "QmRAu8VntK1pXezu3J93UQvt3ero5sGSdfHsNZBcVny8KK"]]
+      [:dags/by-id "QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA"]]
    :schema/by-id {
    	:std {
       :size :integer? 

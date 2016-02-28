@@ -3,7 +3,9 @@
     [goog.events :as events]
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
-    [heh.core :as heh :refer [private private!] :refer-macros [html]]
+    [hyper.terse :refer [private private!] :refer-macros [html]]
+    [hyper.js :refer [ put-local get-local]]
+    [hyper.tools]
     [dollar.bill :as $ :refer [$]]
     [pdfn.core :refer [and* or* not* is*] :refer-macros [defpdfn pdfn]]
     [ifps3.data :as data]
@@ -12,7 +14,7 @@
     [ifps3.cloud :as cloud]
     [cljs.pprint :as pprint])
   (:use 
-    [ifps3.util :only [clog ->edn edn-> put-local get-local format-bytes]]))
+    [ifps3.util :only [->edn edn->]]))
 
 (enable-console-print!)
 (set! om/*logger* nil)
@@ -21,7 +23,7 @@
   ([this] (render-count this {}))
   ([this opts]
   (html (<span.render-count (style (conj {:zIndex 99999} (or opts {})))
-    (str (:render-count (heh.core/private! this :render-count inc)))))))
+    (str (:render-count (private! this :render-count inc)))))))
 
 
 (defn get-normalized [state key]
@@ -179,7 +181,7 @@
               (<img (src (:thumbnail props)) (style {:verticalAlign :middle})))
             (<span.record (:name props))
             (<span.record (last (.split (str (:type props)) "/")))
-            (<span.record.right (ifps3.util/format-bytes (:size props)))))))))
+            (<span.record.right (hyper.tools/format-bytes (:size props)))))))))
 (def file (om/factory File))
 
 
@@ -195,7 +197,7 @@
               (get-in o ["Objects" 0 "Links"])))]
   ;TODO db/add by-id map instead of single v
   (om/transact! reconciler `[(db/add ~res) :folders/by-id])
-  (cloud/save-data :meta/by-id :folders/by-id)))
+  (cloud/save-data :meta/by-id :dags/by-id)))
 
 
 
@@ -223,7 +225,7 @@
               (<span.right (prn-str best) (if other? "..") (style {:width "70%" :text-align :right :overflow :hidden})))
             (<div (str k) (str locked)
               (style {:background :silver}) 
-              (<input (defaultValue (str best)) (style {:float :right :width :50%})
+              (<input (style {:float :right :width :50%})
                 (onBlur (validate v))
                 (onChange (validate v)))
               (when other
@@ -309,9 +311,6 @@
                 (style {:display :inline-block :float :left :clear :both})
                 (<code (str %)) (onClick (view-set-fn %))) 
               [:meta/by-id])
-            
-
-
 
             (<br)(<code "schemas")(<br)
             (map (fn [[k v]]
@@ -327,7 +326,7 @@
                 (style {:display :inline-block :float :left :clear :both})
                 (onClick (view-set-fn %))
                 (dag %)) 
-              (:dags props)) )
+              (:dags props)))
 
           (<div.desktop
             (<div.info 
@@ -362,6 +361,8 @@
   "QmdVteSDv4p2T5wuMc52sDftren5Whvcs3wSQqZe2QXVH4"
   "QmPUHKXhURnTeHrwpuQ8C8seWYcybhwkNrJZZs3cP4eBhY"]))
 ;(cloud/put-object ":dags/by-id" (->edn ["QmPuvQ5nttHZA95CKdt8155WXDvJ1yew7hG9kLCXwaAeGr"]) {} clog)
+
+(cloud/save-data :meta/by-id :dags/by-id)
 
 ;TODO [x] store meta data in localStorage | s3
 ;TODO [ ] transaction to unpin files
