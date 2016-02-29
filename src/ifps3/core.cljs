@@ -26,9 +26,6 @@
     (str (:render-count (private! this :render-count inc)))))))
 
 
-(defn get-normalized [state key]
-  (let [st @state]
-    (into [] (map #(get-in st %)) (get st key))))
 
 (defn read-local
   [{:keys [query ast state] :as env} k params]
@@ -40,7 +37,7 @@
 
 (pdfn read [env k params]
   (let [{:keys [state ast]} env]
-    (prn k (:ast env) (keys env))
+    ;(prn k (:ast env) (keys env))
     (cond (= :prop (-> env :ast :type))
       {:value (get @(:state env) k)}
       :else 
@@ -324,8 +321,9 @@
             (<code "dags")
             (map #(<span.selectable (key (:id %))
                 (style {:display :inline-block :float :left :clear :both})
-                (onClick (view-set-fn %))
-                (dag %)) 
+                (onClick (view-set-fn [:dags/by-id %]))
+                
+                (iphash {:value (:id %)})) 
               (:dags props)))
 
           (<div.desktop
@@ -364,9 +362,13 @@
 
 (cloud/save-data :meta/by-id :dags/by-id)
 
-;TODO [x] store meta data in localStorage | s3
+;TODO [ ] store meta data in localStorage | s3
 ;TODO [ ] transaction to unpin files
 ;TODO [ ] dag object ui
 ;TODO [ ] use mime meta to show icons
 ;TODO [ ] create/edit/organize dags
 ;TODO [ ] selections and metadata editing
+
+
+
+;(def lib (ipfs.core/resolve "QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA"))

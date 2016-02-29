@@ -1,9 +1,13 @@
-(ns ipfs.core (:refer-clojure :exclude [cat]))
+(ns ^:figwheel-always ipfs.core 
+  (:refer-clojure :exclude [cat realize])
+  (:require [hyper.js :refer [log]]))
+
 
 (declare construct)
 
 (def cache (set! (.-cache js/window) #js {}))
 (defn dag? [o] (= (aget o "Data") "\b"))
+(defn link? [s] (re-find #"^Qm[a-zA-Z0-9]{44}$" s))
 
 (defn- ipfs-fn 
   ([prop] (ipfs-fn js/ipfs prop))
@@ -24,26 +28,31 @@
 
 (defn js-eval [b] (js/eval (str "(" (.toString b) ")")))
 
-(defn resolve 
-  ([s] (resolve s identity))
+(defn realize
+  ([s] (or (aget cache s) (realize s identity)))
   ([s cb]
-    (let [root #js {}]
-      (object-get s 
-        (fn [v]
-          (if (dag? v) 
-            (construct v cb root) 
-            (if-let [cached (get cache s)] 
-              (cb cached)
-              (cat s #(cb (aset cache s (js-eval %)))))))) 
-      root)))
+    (if-let [cached (aget cache s)] 
+      (do (cb cached) cached)
+      (let [root #js {}]
+        (aset cache s root)
+        (object-get s 
+          (fn [v]
+            (if (dag? v) 
+              (construct v cb root) 
+              (if-let [cached (get cache s)] 
+                (cb cached)
+                (cat s #(cb (aset cache s %))))))) 
+        root))))
 
 (defn construct 
   ([o cb] (construct o cb #js {}))
   ([o cb root]
     (.map (.-Links o)
       (fn [link] 
-        (resolve (.-Hash link) 
+        (realize (.-Hash link) 
           #(aset root (subname (.-Name link)) %)))) 
     (cb root)))
 
-(set! (.-resolve js/window) resolve)
+(def lib (realize "QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA"))
+
+(log lib)

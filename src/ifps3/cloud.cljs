@@ -119,9 +119,7 @@
       (comp record-dag  #(apply merge (map js->clj [pre %])) )))))) 
   (:dags @data/DATA))
 
-(ifps-object-stat "QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA" (comp pprint/pprint js->clj))
-(def encode (ipjs QmQXtwcHQ6bmhXVFQfdjFfQfTxskFvZEPSJccQvsBWoPVY))
-(encode "<body>")
+
 
 )
 
