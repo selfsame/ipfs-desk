@@ -43,3 +43,9 @@
     (set! (.-src thumb) (.toDataURL canvas "image/png"))
     ($/append (.-body js/document) thumb)
     (.toDataURL canvas "image/png")))
+
+(defn combine [& col]
+  (cond 
+    (map? (first col)) (apply merge-with combine col)
+    (vector? (last col)) (last col)
+    :else (last col)))

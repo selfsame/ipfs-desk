@@ -4,7 +4,7 @@
     ))
 
 (def figwheel-config
-  {:figwheel-options {:server-port 3449
+  {:figwheel-options {:server-port 3441
     :load-warninged-code true
     :css-dirs ["resources/public/css"]}
    ;; builds to focus on

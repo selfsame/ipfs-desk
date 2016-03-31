@@ -1,0 +1,1 @@
+lein run -m clojure.main --init scripts/figwheel.clj

@@ -26,7 +26,7 @@ height:100%;}
 
 span.ipfs{
   padding: .2em .2em .2em .2em;
-  margin: 0.1em 0.3em 0em;
+  margin: 0.1em 0.3em 0em 0em;
   text-align:left;
   height: 0.7em;
   line-height: 0.7em;
@@ -34,7 +34,7 @@ span.ipfs{
   display: inline-block;
   /*vertical-align: middle;*/
   border-radius: 3px;
-  font-family: 'Consolas', courier, mono-spaced;
+  font-family: 'Consolas', courier, monospace, mono-spaced;
   font-size:0.8em;
   background: white; 
   color : black;}
@@ -54,7 +54,7 @@ span.ipfs .hash{
 div.sidebar {
   position:absolute;
   left:0px;
-  width: 160px;
+  width: 100px;
   top:0px;
   bottom:0px;
   font-family:verdana;
@@ -79,8 +79,8 @@ div.sidebar > code {
 
 div.desktop {
   position:absolute;
-  left:160px;
-  right: 250px;
+  left:100px;
+  right: 145px;
   top:0px;
   bottom:0px;
   padding:1em;
@@ -90,7 +90,7 @@ div.desktop {
 div.editor {
   position:absolute;
   right:0px;
-  width: 216px;
+  width: 140px;
   background:#286585;
   font-size:0.8em;
   top:0px;
@@ -571,19 +571,19 @@ span.record{position:absolute;
 border-right: 1px solid silver;}
 
 span.record:first-of-type{
-  left:80px;
-  right: 12em;
+  left:40px;
+  right: 14em;
   overflow:hidden;
   padding:0em;
 
 }
 
 span.record{
-  right: 8em;
+  right: 7.5em;
 }
 
 span.record:last-of-type{
   left:auto;
-  right:1.5em;
+  right:0em;
   border-right:none;
 }

@@ -3,7 +3,7 @@
 (declare construct)
 
 (def cache (set! (.-cache js/window) #js {}))
-(defn dag? [o] (= (aget o "Data") "\b"))
+(defn dag? [o] (or (= (aget o "DataSize") 2) (= (aget o "Data") "\b")))
 
 (defn- ipfs-fn 
   ([prop] (ipfs-fn js/ipfs prop))

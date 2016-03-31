@@ -7,7 +7,8 @@
     [cljs.pprint :as pprint]
     [cljs.reader :as reader]
     [clojure.string :as string]
-    [ifps3.data :as data])
+    [ifps3.data :as data]
+    [ipfs.core :as ipfs])
   (:use 
     [ifps3.util :only [clog ->edn edn-> put-local get-local root-ref resize-dataurl]]
     ))
@@ -49,7 +50,7 @@
 
 (defn load-data [& ks]
   (prn 'load-data)
-  (select-keys (swap! data/DATA (fn [col] (merge-with conj col (into {} (map #(vector % (edn-> (get-local (str %)))) ks))))) (vec ks)))
+  (select-keys (swap! data/DATA (fn [col] (merge-with ifps3.util/combine col (into {} (map #(vector % (edn-> (get-local (str %)))) ks))))) (vec ks)))
 
 (defn- ifps-fn 
   ([prop] (ifps-fn js/ipfs prop))
@@ -76,11 +77,16 @@
       (assoc (dissoc a k) n (get a k))
       a)) col (keys col)))
 
+(defn ipld->edn [o]
+  (let [m (remap-keys {"Hash" :id "Links" :links "CumulativeSize" :cumulative-size "Size" :size "Name" :name "Data" :data
+    "NumLinks" :num-links "BlockSize" :block-size "LinksSize" :links-size "DataSize" :data-size} (js->clj o))
+        m (if (:links m) (conj m {:links (mapv ipld->edn (:links m))}) m)]
+    (if (ipfs/dag? o) (assoc m :dag true) m)))
 
 (defn record-dag [res]
-  (let [data (remap-keys {"Hash" :id "Links" :links "CumulativeSize" :cumulative-size} res)
+  (let [data (remap-keys {"Hash" :id "Links" :links "CumulativeSize" :cumulative-size "Size" :size "Name" :name} res)
         data (select-keys data [:id :links :cumulative-size])]
-  (pprint/pprint data)
+  (pprint/pprint (map #(ifps-object-get (get % "Hash") (comp pprint/pprint js->clj)) (-> data :links)))
   (om/transact! @data/RECONCILER `[(std/update-in ~{:path [:dags/by-id (:id data)] :fn #(merge % data)}) :Main])
   (save-data :dags/by-id)))
 
@@ -110,19 +116,36 @@
     (.readAsArrayBuffer reader file)))
 
 '(
-
-(map (fn [[_ id]]
-  (ifps-object-stat id
+(mapv (fn [[_ id]]
+  (ipfs/object-stat id
   (comp 
     (fn [pre] (ifps-object-get id
       (comp record-dag  #(apply merge (map js->clj [pre %])) )))))) 
-  (:dags @data/DATA))
-
-(ifps-object-stat "QmRAu8VntK1pXezu3J93UQvt3ero5sGSdfHsNZBcVny8KK" (comp pprint/pprint js->clj))
-(def encode (ipjs QmQXtwcHQ6bmhXVFQfdjFfQfTxskFvZEPSJccQvsBWoPVY))
-(encode "<body>")
-
-)
+  (:dags @data/DATA)))
 
 
 
+(declare populate)
+
+(defn gurg [m store]
+  (when (:dag m) 
+    (swap! store assoc-in [:dags/by-id (:id m)] m)
+    (mapv #(populate (:id %) store) (:links m))))
+
+(defn populate 
+  ([id] (populate id data/DATA))
+  ([id store] 
+  (let []
+    (ipfs/object-get id (comp #(gurg % store) #(assoc % :id id) ipld->edn))
+    store)))
+
+;(populate "QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh")
+
+#_(ipfs/object-get "QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY" 
+  (comp #(swap! @data/DATA (fn [m] (update-in m [:dags/by-id "QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY"] ipld->edn))) ipld->edn))
+;(do (swap! data/DATA (fn [m] (update-in m [:dags/by-id "QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY"] ipld->edn))) true)
+#_(ipld->edn (get (:dags/by-id @data/DATA) "QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY"))
+
+;(count (:dags/by-id @data/DATA))
+
+;(save-data :dags/by-id)
