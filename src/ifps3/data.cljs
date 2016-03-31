@@ -36,8 +36,7 @@
 (defonce DATA (atom 
   {:meta/by-id {}
    :dags/by-id {}
-   :dags [
-      [:dags/by-id "QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY"]]
+   :dags []
    :schema/by-id {
    	:std {
       :size :integer? 

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ref",
+				"ref23587"
+			],
+			[
 				"make-",
 				"make-health-bar"
 			],
@@ -264,19 +268,48 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
 			"file": "src/ifps3/cloud.cljs",
 			"settings":
 			{
 				"buffer_size": 3795,
 				"line_ending": "Unix"
+=======
+			"file": "src/ifps3/core.cljs",
+			"settings":
+			{
+				"buffer_size": 11744,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ifps3/util.cljs",
+			"settings":
+			{
+				"buffer_size": 678,
+				"line_ending": "Windows"
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 			}
 		},
 		{
 			"file": "resources/public/linker.html",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 3400,
 				"line_ending": "Unix"
+=======
+				"buffer_size": 3431,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ipfs/core.cljs",
+			"settings":
+			{
+				"buffer_size": 1529,
+				"line_ending": "Windows"
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 			}
 		},
 		{
@@ -288,6 +321,7 @@
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "src/ifps3/core.cljs",
 			"settings":
 			{
@@ -301,12 +335,76 @@
 			{
 				"buffer_size": 991,
 				"line_ending": "Unix"
+=======
+			"contents": "> #object[TypeError TypeError: Cannot read property 'ipfs_fn' of undefined]\nipfs.core=> #object[TypeError TypeError: Cannot set property 'ipfs_fn' of undefined]\nipfs.core=> nil\nipfs.core=> #'ipfs.core/construct\nipfs.core=> #'ipfs.core/cache\nipfs.core=> #'ipfs.core/dag?\nipfs.core=> #'ipfs.core/link?\nipfs.core=> #'ipfs.core/construct\nipfs.core=> #'ipfs.core/cache\nipfs.core=> #'ipfs.core/dag?\nipfs.core=> #'ipfs.core/link?\nipfs.core=> 2\nipfs.core=> #'ipfs.core/lib\nipfs.core=> nil\nipfs.core=> nil\nipfs.core=> ",
+			"settings":
+			{
+				"buffer_size": 509,
+				"line_ending": "Windows",
+				"name": "*REPL* [clojure]",
+				"scratch": true
+			}
+		},
+		{
+			"file": "project.clj",
+			"settings":
+			{
+				"buffer_size": 1543,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/jplur/Desktop/dev/ipjs/src/ipjs/core.cljs",
+			"settings":
+			{
+				"buffer_size": 1846,
+				"line_ending": "Windows"
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+			}
+		},
+		{
+			"contents": "Microsoft Windows [Version 6.1.7601]\nCopyright (c) 2009 Microsoft Corporation.  All rights reserved.\nThe system cannot find the path specified.\n\nC:\\Program Files\\Sublime Text 3>cd C:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src\\ifps3\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src\\ifps3>cd jav	\nThe system cannot find the path specified.\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src\\ifps3>cd ../../\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk>cd jav	\nThe system cannot find the path specified.\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk>cd javascrip\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip>dir\n Volume in drive C has no label.\n Volume Serial Number is 868A-6546\n\n Directory of C:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip\n\n02/26/2016  06:53 PM    <DIR>          .\n02/26/2016  06:53 PM    <DIR>          ..\n02/26/2016  06:53 PM    <DIR>          duplicates\n02/26/2016  06:53 PM    <DIR>          html\n02/26/2016  06:53 PM    <DIR>          ipfs\n02/26/2016  06:53 PM                33 split\n               1 File(s)             33 bytes\n               5 Dir(s)   6,803,533,824 bytes free\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip>ipfs add -r ./\nadded QmeiGALmATmfn35p1KfrRJinja7uAbDChqoA3KkAGmASq9 duplicates\\decode\nadded QmbrnV1GPgTYwsDo3UY1zMTSrnzrr76Qq8MX1qNtwEGKqK duplicates\\encode\nadded QmVQYNaYyeCptmNHPbypctADf4zg5kYSqYpN7dnZmNkCV9 duplicates\\split\nadded Qmehy1BJ1kfMTvi4BcdViU3jbNjbYLDLqTHgrS75poF9vx duplicates\nadded QmeiGALmATmfn35p1KfrRJinja7uAbDChqoA3KkAGmASq9 html\\decode\nadded QmbrnV1GPgTYwsDo3UY1zMTSrnzrr76Qq8MX1qNtwEGKqK html\\encode\nadded QmWMLj3Kw3ugZ2MSzuJFhq9q5J7VPAV7LH7U3NsDkAVDoC html\nadded QmZqxnF7BmSeKgp5wh4asxvJiBph3hdeBhwAZp7BBGp84F ipfs\\link\\pattern\nadded QmQAPK8Uj11LRUbFuw8XME3fceErb8Mw1AnpkbD96ZvJxB ipfs\\link\nadded QmaLVDr8Geb3YDAnz7UATksrEPbXzyfQQERQRCkKkoynsy ipfs\nadded QmVQYNaYyeCptmNHPbypctADf4zg5kYSqYpN7dnZmNkCV9 split\nadded QmYhkkzLDkN8dfYoEe9ERTgjVnP5AexuBuZhCNYtHDdioJ .\nadded QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA \n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip>",
+			"settings":
+			{
+				"buffer_size": 2005,
+				"line_ending": "Windows",
+				"name": "*REPL* [shell]",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/PackageDev/Support/Convert to ....sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/PackageDev/Support/Convert to ....sublime-build",
+					""
+				],
+				[
+					"Packages/PackageDev/Support/Convert to ....sublime-build",
+					"JSON"
+				],
+				[
+					"Packages/PackageDev/Support/Convert to ....sublime-build",
+					"Property List"
+				],
+				[
+					"Packages/PackageDev/Support/Convert to ....sublime-build",
+					"YAML (Block Style)"
+				],
+				[
+					"Packages/PackageDev/Support/Convert to ....sublime-build",
+					"YAML (Default Style)"
+				]
+			],
+			[
+				"Packages/PackageDev/Support/Convert to ....sublime-build",
+				"Property List"
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
@@ -372,7 +470,7 @@
 	},
 	"console":
 	{
-		"height": 233.0,
+		"height": 139.0,
 		"history":
 		[
 			"view.run_command(\"expand_selection\", {\"to\": \"word\"})",
@@ -421,6 +519,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/home/selfsame/dev/ipfs-desk",
 		"/home/selfsame/dev/ipfs-desk/resources",
 		"/home/selfsame/dev/ipfs-desk/resources/public",
@@ -451,6 +550,51 @@
 		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/ifps3/data.cljs",
 		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/scripts/figwheel.clj",
 		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources/public/index.html",
+=======
+		"/C/Users/jplur/Desktop/dev/ipfs-desk",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/html",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ipfs",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit"
+	],
+	"file_history":
+	[
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/db",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/clojurescript.sublime-settings",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit/core.clj",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/html/decode",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/html/encode",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojure.sublime-settings",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/note.txt",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/link-finder.html",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/encode",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/ClojureScript/clojurescript.tmLanguage",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/heh/core.clj",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/core.cljs",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.sublime-settings",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/test.cljs",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/clojure-cool.YAML-tmTheme",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/data.cljs",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/clojure-cool.tmTheme",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/figwheel.bat",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/README.md",
+		"/C/Users/jplur/Desktop/dev/final/src/sync/mouse.cljs",
+		"/C/Users/jplur/Desktop/dev/final/src/sync/keys.cljs",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/project.clj",
+		"/C/Users/jplur/Desktop/dev/final/project.clj",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit/core.cljs",
+		"/C/Users/jplur/Desktop/dev/learnnext/src/learnnext/core.cljs",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public/index.html",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/scripts/figwheel.clj",
+		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public/css/style.css",
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 		"/C/Users/jplur/Desktop/oisjfd.gif",
 		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/css/style.css",
 		"/C/Users/jplur/Desktop/dev/ifps3/scripts/figwheel.clj",
@@ -510,7 +654,6 @@
 		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/meta.txt",
 		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/imgmeta.py",
 		"/C/Users/jplur/Desktop/giflife.py",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/dense/core.cljs",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/impl.cljc",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/core.cljs",
@@ -521,7 +664,6 @@
 		"/C/Users/jplur/Desktop/dev/learnnext/project.clj",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Arcadia/Arcadia.tmlanguage",
 		"/C/Users/jplur/Desktop/dev/learnnext/learnnext.sublime-project",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojure.sublime-settings",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Unity/Default.sublime-commands",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Unity/Main.sublime-menu",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
@@ -549,6 +691,7 @@
 		"/C/Users/jplur/work/dev/final/src/fp/depreciated.cljs",
 		"/C/Users/jplur/work/dev/final/resources/public/css/toolbox.css",
 		"/C/Users/jplur/work/dev/final/resources/public/index.html",
+<<<<<<< HEAD
 		"/C/Users/jplur/work/dev/final/src/fp/std.clj",
 		"/C/Users/jplur/work/dev/final/src/css/units.cljs",
 		"/C/Users/jplur/work/dev/final/src/fp/canvas.cljs",
@@ -561,6 +704,9 @@
 		"/C/Users/jplur/work/dev/final/src/comp/interface.cljs",
 		"/C/Users/jplur/work/dev/final/src/comp/dialogue.cljs",
 		"/C/Users/jplur/work/dev/final/src/fp/final.cljs"
+=======
+		"/C/Users/jplur/work/dev/final/src/fp/std.clj"
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 	],
 	"find":
 	{
@@ -571,6 +717,7 @@
 		"height": 109.0,
 		"where_history":
 		[
+			"C:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src",
 			"C:\\Users\\jplur\\Desktop\\dev\\ifps3",
 			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src\\ifps3",
 			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src",
@@ -602,6 +749,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"prn",
 			"pprint",
 			"prn",
@@ -609,9 +757,27 @@
 			".log",
 			"prn",
 			"pprint",
+=======
+			"log",
+			"construct",
+			"log",
+			"clog",
+			"ls",
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 			"prn",
-			".file",
-			"file",
+			")))",
+			"put-local",
+			"reconciler",
+			"save",
+			"val",
+			"string",
+			"backgr",
+			"background",
+			"normalize-dag",
+			"415px",
+			"reconciler",
+			"pdf",
+			"guess-mime",
 			"prn",
 			"event",
 			"EventType",
@@ -720,6 +886,7 @@
 			" px",
 			"px",
 			"element-offset",
+<<<<<<< HEAD
 			"class-str",
 			"icon",
 			"draggable",
@@ -730,6 +897,9 @@
 			"click-mode-option",
 			"UID",
 			"alter-class-string"
+=======
+			"class-str"
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -737,6 +907,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"pdfn",
 			"Exception",
 			"->v3",
 			"\\{\\n\\t",
@@ -813,19 +984,26 @@
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
 					"file": "src/ifps3/cloud.cljs",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 3795,
+=======
+					"file": "src/ifps3/core.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11744,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2420,
-								2420
+								10632,
+								10632
 							]
 						],
 						"settings":
@@ -834,6 +1012,224 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
+						"translation.x": 0.0,
+						"translation.y": 4800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/ifps3/util.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								678,
+								678
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/ifps3/cloud.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								467,
+								467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1020.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/ipfs/core.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1529,
+								1529
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/ifps3/data.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1305,
+								1305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 509,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								2420,
+								2420
+=======
+								509,
+								509
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+=======
+							"auto_complete": true,
+							"auto_indent": false,
+							"detect_indentation": false,
+							"gutter": false,
+							"history_arrows": true,
+							"indent_subsequent_lines": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "clojure",
+							"repl_id": "db5da4bb761342d8b3e0fa55f69c7d51",
+							"repl_restart_args":
+							{
+								"cmd":
+								{
+									"linux":
+									[
+										"lein",
+										"figwheel"
+									],
+									"osx":
+									[
+										"lein",
+										"figwheel"
+									],
+									"windows":
+									[
+										"lein",
+										"run",
+										"-m",
+										"clojure.main",
+										"--init",
+										"scripts/figwheel.clj"
+									]
+								},
+								"cwd":
+								{
+									"linux": "$file_path",
+									"osx": "$file_path",
+									"windows": "$file_path"
+								},
+								"encoding": "utf8",
+								"extend_env":
+								{
+									"INSIDE_EMACS": "1"
+								},
+								"external_id": "clojure",
+								"soft_quit": "\n(. System exit 0)\n",
+								"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+								"type": "subprocess"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+<<<<<<< HEAD
 						"translation.x": 0.0,
 						"translation.y": 1185.0,
 						"zoom_level": 1.0
@@ -848,14 +1244,41 @@
 					"settings":
 					{
 						"buffer_size": 3400,
+=======
+						"translation.x": -0.0,
+						"translation.y": 101.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "project.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1543,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								588,
 								588
+=======
+								501,
+								501
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 							]
 						],
 						"settings":
@@ -866,6 +1289,7 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+<<<<<<< HEAD
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -896,65 +1320,151 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 135.0,
+=======
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
 					"buffer": 3,
 					"file": "src/ifps3/core.cljs",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 11555,
+=======
+					"buffer": 7,
+					"file": "/C/Users/jplur/Desktop/dev/ipjs/src/ipjs/core.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1846,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								11054,
 								11054
+=======
+								1206,
+								1206
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 4651.0,
+=======
+							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 495.0,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
 					"buffer": 4,
 					"file": "scripts/figwheel.clj",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 991,
+=======
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2005,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								158,
 								158
+=======
+								1909,
+								1955
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_complete": true,
+							"auto_indent": false,
+							"detect_indentation": false,
+							"gutter": false,
+							"history_arrows": true,
+							"indent_subsequent_lines": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "shell",
+							"repl_id": "041a6a86d91542528aa6f8288065cce8",
+							"repl_restart_args":
+							{
+								"cmd":
+								{
+									"linux":
+									[
+										"bash",
+										"-i"
+									],
+									"osx":
+									[
+										"bash",
+										"-i"
+									],
+									"windows":
+									[
+										"cmd.exe"
+									]
+								},
+								"cmd_postfix": "\n",
+								"cwd": "$file_path",
+								"encoding":
+								{
+									"linux": "utf-8",
+									"osx": "utf-8",
+									"windows": "$win_cmd_encoding"
+								},
+								"env":
+								{
+								},
+								"external_id": "shell",
+								"suppress_echo": true,
+								"syntax": "Packages/Text/Plain text.tmLanguage",
+								"type": "subprocess"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -972,11 +1482,20 @@
 			"sheets":
 			[
 			]
+=======
+						"translation.y": 421.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -1008,13 +1527,21 @@
 		"cols":
 		[
 			0.0,
+<<<<<<< HEAD
 			0.5,
+=======
+			0.616505415766,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+<<<<<<< HEAD
 			0.5,
+=======
+			0.328660390122,
+>>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 			1.0
 		]
 	},
@@ -1023,11 +1550,15 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
+	"output.package_dev":
+	{
+		"height": 92.0
+	},
+	"pinned_build_system": "Packages/PackageDev/Support/Convert to ....sublime-build",
 	"project": "ifps3.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1073,7 +1604,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 165.0,
+	"side_bar_width": 163.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

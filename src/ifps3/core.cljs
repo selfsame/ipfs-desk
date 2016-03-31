@@ -3,7 +3,9 @@
     [goog.events :as events]
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
-    [heh.core :as heh :refer [private private!] :refer-macros [html]]
+    [hyper.terse :refer [private private!] :refer-macros [html]]
+    [hyper.js :refer [ put-local get-local]]
+    [hyper.tools]
     [dollar.bill :as $ :refer [$]]
     [pdfn.core :refer [and* or* not* is*] :refer-macros [defpdfn pdfn]]
     [ifps3.data :as data]
@@ -12,7 +14,7 @@
     [ifps3.cloud :as cloud]
     [cljs.pprint :as pprint])
   (:use 
-    [ifps3.util :only [clog ->edn edn-> put-local get-local format-bytes]]))
+    [ifps3.util :only [->edn edn->]]))
 
 (enable-console-print!)
 (set! om/*logger* nil)
@@ -21,12 +23,9 @@
   ([this] (render-count this {}))
   ([this opts]
   (html (<span.render-count (style (conj {:zIndex 99999} (or opts {})))
-    (str (:render-count (heh.core/private! this :render-count inc)))))))
+    (str (:render-count (private! this :render-count inc)))))))
 
 
-(defn get-normalized [state key]
-  (let [st @state]
-    (into [] (map #(get-in st %)) (get st key))))
 
 (defn read-local
   [{:keys [query ast state] :as env} k params]
@@ -195,7 +194,7 @@
             (<span.record (:name props))
             (<span.record (last (.split (str (:type props)) "/"))
               (style {:right :14em}))
-            (<span.record.right (ifps3.util/format-bytes (:size props)))
+            (<span.record.right (hyper.tools/format-bytes (:size props)))
             (<span.record.right (iphash {:value (:id props)}))))))))
 (def file (om/factory File))
 
@@ -212,7 +211,7 @@
               (get-in o ["Objects" 0 "Links"])))]
   ;TODO db/add by-id map instead of single v
   (om/transact! reconciler `[(db/add ~res) :folders/by-id])
-  (cloud/save-data :meta/by-id :folders/by-id)))
+  (cloud/save-data :meta/by-id :dags/by-id)))
 
 
 
@@ -240,7 +239,7 @@
               (<span.right (prn-str best) (if other? "..") (style {:width "70%" :text-align :right :overflow :hidden})))
             (<div (str k) (str locked)
               (style {:background :silver}) 
-              (<input (defaultValue (str best)) (style {:float :right :width :50%})
+              (<input (style {:float :right :width :50%})
                 (onBlur (validate v))
                 (onChange (validate v)))
               (when other
@@ -374,13 +373,19 @@
  (swap! data/DATA update-in [:dags] #(vec (concat % [[:dags/by-id id]])))
  (cloud/save-data :dags))
 
-;(add-dag "QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh")
+(add-dag "QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh")
 
 
 
-;TODO [x] store meta data in localStorage | s3
+;(cloud/save-data :meta/by-id :dags/by-id)
+
+;TODO [ ] store meta data in localStorage | s3
 ;TODO [ ] transaction to unpin files
 ;TODO [ ] dag object ui
 ;TODO [ ] use mime meta to show icons
 ;TODO [ ] create/edit/organize dags
 ;TODO [ ] selections and metadata editing
+
+
+
+;(def lib (ipfs.core/resolve "QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA"))

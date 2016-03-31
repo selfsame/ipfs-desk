@@ -7,6 +7,7 @@
                  [figwheel-sidecar "0.5.0-2" :scope "test"]
                  [org.omcljs/om "1.0.0-alpha26"]
                  [org.clojure/core.async "0.2.371"]
+                 [selfsame/hyper "0.3.0-SNAPSHOT"]
                  [selfsame/dollar "0.0.9-SNAPSHOT"]
                  [selfsame/pdfn "1.0.1-SNAPSHOT"]]
 

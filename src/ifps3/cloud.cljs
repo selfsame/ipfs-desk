@@ -6,11 +6,12 @@
     [cljs.core.async :as async :refer [>! <! put! chan]]
     [cljs.pprint :as pprint]
     [cljs.reader :as reader]
+    [hyper.js :refer [log put-local get-local]]
     [clojure.string :as string]
     [ifps3.data :as data]
     [ipfs.core :as ipfs])
   (:use 
-    [ifps3.util :only [clog ->edn edn-> put-local get-local root-ref resize-dataurl]]
+    [ifps3.util :only [->edn edn-> root-ref]]
     ))
 
 
@@ -93,11 +94,11 @@
 (defn image-loaded [e id]
   (om/transact! @data/RECONCILER 
     `[(std/update-in ~{:path [:meta/by-id id] 
-      :fn #(assoc % :thumbnail (resize-dataurl (.-result (.-target e)) 32 32))}) :Main])
+      :fn #(assoc % :thumbnail (hyper.js/resize-dataurl (.-result (.-target e)) 32 32))}) :Main])
   (save-data :meta/by-id))
 
 (defn file-loaded [e file]
-  (clog #js [e file])
+  (log #js [e file])
   (ifps-add 
     ((.-Buffer js/ipfs) (.-result (.-target e))) 
     (fn [res] 
@@ -138,6 +139,7 @@
   (let []
     (ipfs/object-get id (comp #(gurg % store) #(assoc % :id id) ipld->edn))
     store)))
+
 
 ;(populate "QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh")
 
