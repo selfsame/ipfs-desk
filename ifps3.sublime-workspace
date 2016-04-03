@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"ref",
-				"ref23587"
-			],
-			[
 				"make-",
 				"make-health-bar"
 			],
@@ -268,64 +264,42 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
 			"file": "src/ifps3/cloud.cljs",
 			"settings":
 			{
-				"buffer_size": 3795,
+				"buffer_size": 4820,
 				"line_ending": "Unix"
-=======
-			"file": "src/ifps3/core.cljs",
-			"settings":
-			{
-				"buffer_size": 11744,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/ifps3/util.cljs",
-			"settings":
-			{
-				"buffer_size": 678,
-				"line_ending": "Windows"
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-			}
-		},
-		{
-			"file": "resources/public/linker.html",
-			"settings":
-			{
-<<<<<<< HEAD
-				"buffer_size": 3400,
-				"line_ending": "Unix"
-=======
-				"buffer_size": 3431,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/ipfs/core.cljs",
 			"settings":
 			{
-				"buffer_size": 1529,
-				"line_ending": "Windows"
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-			}
-		},
-		{
-			"file": "src/ifps3/data.cljs",
-			"settings":
-			{
-				"buffer_size": 1747,
+				"buffer_size": 1560,
 				"line_ending": "Unix"
 			}
 		},
 		{
-<<<<<<< HEAD
 			"file": "src/ifps3/core.cljs",
 			"settings":
 			{
-				"buffer_size": 11555,
+				"buffer_size": 13347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/ifps3/util.cljs",
+			"settings":
+			{
+				"buffer_size": 1369,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/public/css/style.css",
+			"settings":
+			{
+				"buffer_size": 7952,
 				"line_ending": "Unix"
 			}
 		},
@@ -335,76 +309,38 @@
 			{
 				"buffer_size": 991,
 				"line_ending": "Unix"
-=======
-			"contents": "> #object[TypeError TypeError: Cannot read property 'ipfs_fn' of undefined]\nipfs.core=> #object[TypeError TypeError: Cannot set property 'ipfs_fn' of undefined]\nipfs.core=> nil\nipfs.core=> #'ipfs.core/construct\nipfs.core=> #'ipfs.core/cache\nipfs.core=> #'ipfs.core/dag?\nipfs.core=> #'ipfs.core/link?\nipfs.core=> #'ipfs.core/construct\nipfs.core=> #'ipfs.core/cache\nipfs.core=> #'ipfs.core/dag?\nipfs.core=> #'ipfs.core/link?\nipfs.core=> 2\nipfs.core=> #'ipfs.core/lib\nipfs.core=> nil\nipfs.core=> nil\nipfs.core=> ",
+			}
+		},
+		{
+			"contents": "Figwheel: Starting server at http://localhost:3441\nFigwheel: Watching build - dev\nCompiling \"resources/public/js/compiled/ifps3.js\" from [\"src\"]...\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/core.cljs\nCompiling target/figwheel_temp/dev/figwheel/connect.cljs\nAnalyzing file:/home/selfsame/dev/ipfs-desk/src/ifps3/core.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/selfsame/hyper/0.3.0-SNAPSHOT/hyper-0.3.0-SNAPSHOT.jar!/hyper/terse.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/util.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/dom.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/selfsame/hyper/0.3.0-SNAPSHOT/hyper-0.3.0-SNAPSHOT.jar!/hyper/js.cljs\nReading analysis cache for file:/home/selfsame/dev/ipfs-desk/src/ipfs/core.cljs\nReading analysis cache for file:/home/selfsame/dev/ipfs-desk/src/ifps3/data.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/selfsame/hyper/0.3.0-SNAPSHOT/hyper-0.3.0-SNAPSHOT.jar!/hyper/tools.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/selfsame/dollar/0.0.9-SNAPSHOT/dollar-0.0.9-SNAPSHOT.jar!/dollar/bill.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/string.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/pprint.cljs\nReading analysis cache for file:/home/selfsame/dev/ipfs-desk/src/orbit/core.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/protocols.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/buffers.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/dispatch.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/channels.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/ioc_helpers.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/timers.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/cache.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/zip.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/impl/parser.cljc\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next/protocols.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/tempid.cljc\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/walk.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/com/cognitect/transit-cljs/0.8.225/transit-cljs-0.8.225.jar!/cognitect/transit.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/transit.cljc\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/next.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/reader.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/omcljs/om/1.0.0-alpha26/om-1.0.0-alpha26.jar!/om/core.cljs\nReading analysis cache for file:/home/selfsame/dev/ipfs-desk/src/ifps3/util.cljs\nReading analysis cache for file:/home/selfsame/dev/ipfs-desk/src/ifps3/cloud.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/selfsame/pdfn/1.0.1-SNAPSHOT/pdfn-1.0.1-SNAPSHOT.jar!/pdfn/core.cljc\nWARNING: Use of undeclared Var ifps3.util/format-bytes at line 197 /home/selfsame/dev/ipfs-desk/src/ifps3/core.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/clojure/set.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/utils.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/file_reloading.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/org/clojure/clojurescript/1.7.170/clojurescript-1.7.170.jar!/cljs/repl.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/socket.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client/heads_up.cljs\nReading analysis cache for jar:file:/home/selfsame/.m2/repository/figwheel/figwheel/0.5.0-2/figwheel-0.5.0-2.jar!/figwheel/client.cljs\nSuccessfully compiled \"resources/public/js/compiled/ifps3.js\" in 3.023 seconds.\nFigwheel: Starting CSS Watcher for paths  [\"resources/public/css\"]\nLaunching ClojureScript REPL for build: dev\nFigwheel Controls:\n          (stop-autobuild)                ;; stops Figwheel autobuilder\n          (start-autobuild [id ...])      ;; starts autobuilder focused on optional ids\n          (switch-to-build id ...)        ;; switches autobuilder to different build\n          (reset-autobuild)               ;; stops, cleans, and starts autobuilder\n          (reload-config)                 ;; reloads build config and resets autobuild\n          (build-once [id ...])           ;; builds source one time\n          (clean-builds [id ..])          ;; deletes compiled cljs target files\n          (print-config [id ...])         ;; prints out build configurations\n          (fig-status)                    ;; displays current state of system\n  Switch REPL build focus:\n          :cljs/quit                      ;; allows you to switch REPL to another build\n    Docs: (doc function-name-here)\n    Exit: Control+C or :cljs/quit\n Results: Stored in vars *1, *2, *3, *e holds last exception object\nPrompt will show when Figwheel connects to your application\nTo quit, type: :cljs/quit\ncljs.user=> \ncljs.user=> nil\nifps3.core=> \nifps3.core=> [[:dags/by-id \"QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY\"] [:dags/by-id \"Qmb5q39Aow38NJhqPrXw3cCrAwBSoco4MsQs3LqD9ZLFAZ\"] [:dags/by-id \"Qmb5q39Aow38NJhqPrXw3cCrAwBSoco4MsQs3LqD9ZLFAZ\"] [:dags/by-id \"QmXc2A8czoHa4fc8uVbwCZFMHjCH82eEwvaKacmNtifG9S\"] [:dags/by-id \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\"] [:dags/by-id \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\"] [:dags/by-id \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\"] [:dags/by-id \"QmaGCTsnnoT5E4XuEirVUrT8KWQtKDUBqfJHjaUwVxNkN6\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"]]\nifps3.core=> (swap! data/DATA assoc :dags [[:dags/by-id \"QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY\"]])\nThu Mar 31 17:49:14 EDT 2016 [server-loop] WARN - opcode mismatch: pre: 1, now: 0\nEval timed out!\nNo stacktrace available.\nifps3.core=> save-data\n(:meta/by-id :dags/by-id :dags)\nifps3.core=>\nifps3.core=> (do (swap! data/DATA assoc :dags [[:dags/by-id \"QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY\"] [:dags/by-id \"Qmb5q39Aow38NJhqPrXw3cCrAwBSoco4MsQs3LqD9ZLFAZ\"] [:dags/by-id \"Qmb5q39Aow38NJhqPrXw3cCrAwBSoco4MsQs3LqD9ZLFAZ\"] [:dags/by-id \"QmXc2A8czoHa4fc8uVbwCZFMHjCH82eEwvaKacmNtifG9S\"] [:dags/by-id \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\"] [:dags/by-id \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\"] [:dags/by-id \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\"] [:dags/by-id \"QmaGCTsnnoT5E4XuEirVUrT8KWQtKDUBqfJHjaUwVxNkN6\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"] [:dags/by-id \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\"]]\n) true)\ntrue\nifps3.core=>\nifps3.core=> (save-data :meta/by-id :dags/by-id :dags)\nWARNING: Use of undeclared Var ifps3.core/save-data at line 1 <cljs repl>\n#object[TypeError TypeError: Cannot read property 'call' of undefined]\nifps3.core=> (cloud/save-data :meta/by-id :dags/by-id :dags)\nsave-data\n(:meta/by-id :dags/by-id :dags)\nifps3.core=> (keys (:dags @data/DATA))\n(:dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id :dags/by-id)\nifps3.core=> (vals (:dags @data/DATA))\n(\"QmUcaPq17HkUk485tigEDW1QPvewCCeRFnyMH8yuR3ddtY\" \"Qmb5q39Aow38NJhqPrXw3cCrAwBSoco4MsQs3LqD9ZLFAZ\" \"Qmb5q39Aow38NJhqPrXw3cCrAwBSoco4MsQs3LqD9ZLFAZ\" \"QmXc2A8czoHa4fc8uVbwCZFMHjCH82eEwvaKacmNtifG9S\" \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\" \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\" \"Qmc7hxdZF6k3vLat9cTLoWKcD918699MFgYSLm5cUJXfVw\" \"QmaGCTsnnoT5E4XuEirVUrT8KWQtKDUBqfJHjaUwVxNkN6\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\" \"QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh\")\nifps3.core=> (count (vals (:dags @data/DATA)))\n24\nifps3.core=> (count (set (vals (:dags @data/DATA))))\n6\nifps3.core=> (swap! data/DATA update :dags (comp vec distinct))\nThu Mar 31 18:01:13 EDT 2016 [server-loop] WARN - opcode mismatch: pre: 1, now: 0\n\nEval timed out!\nNo stacktrace available.\nifps3.core=> ifps3.core=> (cloud/save-data :meta/by-id :dags/by-id :dags)\nsave-data\n(:meta/by-id :dags/by-id :dags)\nifps3.core=> (first (:meta/by-id @data/DATA))\n[\"QmX7Zsxzt7jZ1BWM3qWCs75qwenUE4rHaQwvPxPkqqRR85\" {:name \"code-image.py\", :size 2583, :type \"text/x-python\", :modified \"2016-03-06T09:16:59.552Z\", :id \"QmX7Zsxzt7jZ1BWM3qWCs75qwenUE4rHaQwvPxPkqqRR85\"}]\nifps3.core=> (keys (:meta/by-id @data/DATA))\n(\"QmX7Zsxzt7jZ1BWM3qWCs75qwenUE4rHaQwvPxPkqqRR85\" \"QmQwUWQC52PrGMsqVPjTKcH2TP7goyoN2sHRo1uqjeeYMp\" \"Qmez2vsnKn87cqQd6dhaQDhrDpdkLEoDihefQQURyeNt62\" \"QmPdCnh3XmKnjF6ZbPhUu9oDdjtHiBXJ5HxTenz3GvhXg4\" \"QmbazCivmk3caGDqdVzjTykPhTtmBPxUMm19zPMe4AWaHW\" \"QmQFWkBWSiwsdKTz6r9KvEfgmW8KfQWWZ1pLnp5pXGxFpA\" \"QmRnSUETxF7tydprL3nUBJED9PABseo2XC1EzGw8XNYZFw\" \"QmYHa9PTch7SL9PmbhqStWjj3np8cnurqskcSy5qbcDQMJ\" \"QmShDj25KPZkGDMCt2K5DkzXtUVoE9HQPR8KkSxzMSrqJw\" \"QmbB32JtKAnmKtqcXD94rS8aG2uEUHSZMrKnif4ZsXYBpW\" \"QmbY3ki77M9DzQHieCSVn7M3aeyLcM6rdFkYaVJzjT9qAU\" \"Qmc6RHyzLL5PxZ3M2a1dioExiXyNin7GikqUyq4MeNrvJG\")\nifps3.core=> util/by-key-vec\n#object[ifps3$util$by_key_vec \"function ifps3$util$by_key_vec(k,v){\nif(cljs.core.sequential_QMARK_.call(null,v)){\nreturn cljs.core.mapv.call(null,(function (p1__26594_SHARP_){\nreturn (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[k,p1__26594_SHARP_],null));\n}),v);\n} else {\nreturn (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[k,v],null));\n}\n}\"]\nifps3.core=> (util/by-key-vec :meta/by-id (keys (:meta/by-id @data/DATA)))\n[[:meta/by-id \"QmX7Zsxzt7jZ1BWM3qWCs75qwenUE4rHaQwvPxPkqqRR85\"] [:meta/by-id \"QmQwUWQC52PrGMsqVPjTKcH2TP7goyoN2sHRo1uqjeeYMp\"] [:meta/by-id \"Qmez2vsnKn87cqQd6dhaQDhrDpdkLEoDihefQQURyeNt62\"] [:meta/by-id \"QmPdCnh3XmKnjF6ZbPhUu9oDdjtHiBXJ5HxTenz3GvhXg4\"] [:meta/by-id \"QmbazCivmk3caGDqdVzjTykPhTtmBPxUMm19zPMe4AWaHW\"] [:meta/by-id \"QmQFWkBWSiwsdKTz6r9KvEfgmW8KfQWWZ1pLnp5pXGxFpA\"] [:meta/by-id \"QmRnSUETxF7tydprL3nUBJED9PABseo2XC1EzGw8XNYZFw\"] [:meta/by-id \"QmYHa9PTch7SL9PmbhqStWjj3np8cnurqskcSy5qbcDQMJ\"] [:meta/by-id \"QmShDj25KPZkGDMCt2K5DkzXtUVoE9HQPR8KkSxzMSrqJw\"] [:meta/by-id \"QmbB32JtKAnmKtqcXD94rS8aG2uEUHSZMrKnif4ZsXYBpW\"] [:meta/by-id \"QmbY3ki77M9DzQHieCSVn7M3aeyLcM6rdFkYaVJzjT9qAU\"] [:meta/by-id \"Qmc6RHyzLL5PxZ3M2a1dioExiXyNin7GikqUyq4MeNrvJG\"]]\nifps3.core=> (swap! data/DATA conj {:cwd (vec (take 4 (util/by-key-vec :meta/by-id (keys (:meta/by-id @data/DATA)))))})\nThu Mar 31 19:04:14 EDT 2016 [server-loop] WARN - opcode mismatch: pre: 1, now: 0\nEval timed out!\nNo stacktrace available.\nifps3.core=> \nifps3.core=> (do (swap! data/DATA conj {:cwd (vec (take 4 (util/by-key-vec :meta/by-id (keys (:meta/by-id @data/DATA)))))}) true)\ntrue\nifps3.core=> (cloud/save :cwd)\nWARNING: Use of undeclared Var ifps3.cloud/save at line 1 <cljs repl>\n#object[TypeError TypeError: Cannot read property 'call' of undefined]\nifps3.core=> (cloud/save-data :cwd)\nsave-data\n(:cwd)\nifps3.core=> clojure.lang.ExceptionInfo: Only [lib.ns :only (names)] specs supported in :use / :use-macros; offending spec: [arcadia.core] at line 1 <cljs repl> {:file \"<cljs repl>\", :line 1, :column 1, :tag :cljs/analysis-error}\n	at clojure.core$ex_info.invoke(core.clj:4593)\n	at cljs.analyzer$error.invoke(analyzer.cljc:568)\n	at cljs.analyzer$error.invoke(analyzer.cljc:566)\n	at cljs.analyzer$use__GT_require.invoke(analyzer.cljc:1730)\n	at clojure.core$partial$fn__4527.invoke(core.clj:2493)\n	at clojure.core$comp$fn__4495.invoke(core.clj:2438)\n	at clojure.core$map$fn__4553.invoke(core.clj:2624)\n	at clojure.lang.LazySeq.sval(LazySeq.java:40)\n	at clojure.lang.LazySeq.seq(LazySeq.java:49)\n	at clojure.lang.Cons.next(Cons.java:39)\n	at clojure.lang.RT.boundedLength(RT.java:1735)\n	at clojure.lang.RestFn.applyTo(RestFn.java:130)\n	at clojure.core$apply.invoke(core.clj:634)\n	at cljs.analyzer$eval1668$fn__1670$fn__1675.invoke(analyzer.cljc:1926)\n	at clojure.core.protocols$fn__6523.invoke(protocols.clj:167)\n	at clojure.core.protocols$fn__6478$G__6473__6487.invoke(protocols.clj:19)\n	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)\n	at clojure.core.protocols$fn__6506.invoke(protocols.clj:101)\n	at clojure.core.protocols$fn__6452$G__6447__6465.invoke(protocols.clj:13)\n	at clojure.core$reduce.invoke(core.clj:6519)\n	at cljs.analyzer$eval1668$fn__1670.invoke(analyzer.cljc:1909)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:251)\n	at cljs.analyzer$analyze_seq_STAR_.invoke(analyzer.cljc:2390)\n	at cljs.analyzer$analyze_seq_STAR__wrap.invoke(analyzer.cljc:2395)\n	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:2416)\n	at cljs.analyzer$analyze_form.invoke(analyzer.cljc:2525)\n	at cljs.analyzer$analyze_STAR_.invoke(analyzer.cljc:2572)\n	at cljs.analyzer$analyze.invoke(analyzer.cljc:2588)\n	at cljs.repl$evaluate_form.invoke(repl.cljc:440)\n	at cljs.repl$eval_cljs.invoke(repl.cljc:560)\n	at cljs.repl$repl_STAR_$read_eval_print__4860.invoke(repl.cljc:857)\n	at cljs.repl$repl_STAR_$fn__4866$fn__4875.invoke(repl.cljc:896)\n	at cljs.repl$repl_STAR_$fn__4866.invoke(repl.cljc:895)\n	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:1149)\n	at cljs.repl$repl_STAR_.invoke(repl.cljc:859)\n	at figwheel_sidecar.repl$eval15231$fn__15232.invoke(repl.clj:148)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:238)\n	at figwheel_sidecar.repl$repl.invoke(repl.clj:165)\n	at figwheel_sidecar.system$start_figwheel_repl.invoke(system.clj:471)\n	at figwheel_sidecar.system$figwheel_cljs_repl_STAR_.invoke(system.clj:515)\n	at figwheel_sidecar.system$build_switching_cljs_repl_STAR_.invoke(system.clj:521)\n	at figwheel_sidecar.system$cljs_repl_STAR_.invoke(system.clj:541)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:565)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:563)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:102)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:99)\n	at user$start_dev.invoke(figwheel.clj:32)\n	at user$eval16600.invoke(figwheel.clj:35)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at user$eval5.invoke(form-init407864836396501663.clj:1)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.eval(Compiler.java:6772)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\nifps3.core=> clojure.lang.ExceptionInfo: Only [lib.ns :only (names)] specs supported in :use / :use-macros; offending spec: [arcadia.core] at line 1 <cljs repl> {:file \"<cljs repl>\", :line 1, :column 1, :tag :cljs/analysis-error}\n	at clojure.core$ex_info.invoke(core.clj:4593)\n	at cljs.analyzer$error.invoke(analyzer.cljc:568)\n	at cljs.analyzer$error.invoke(analyzer.cljc:566)\n	at cljs.analyzer$use__GT_require.invoke(analyzer.cljc:1730)\n	at clojure.core$partial$fn__4527.invoke(core.clj:2493)\n	at clojure.core$comp$fn__4495.invoke(core.clj:2438)\n	at clojure.core$map$fn__4553.invoke(core.clj:2624)\n	at clojure.lang.LazySeq.sval(LazySeq.java:40)\n	at clojure.lang.LazySeq.seq(LazySeq.java:49)\n	at clojure.lang.Cons.next(Cons.java:39)\n	at clojure.lang.RT.boundedLength(RT.java:1735)\n	at clojure.lang.RestFn.applyTo(RestFn.java:130)\n	at clojure.core$apply.invoke(core.clj:634)\n	at cljs.analyzer$eval1668$fn__1670$fn__1675.invoke(analyzer.cljc:1926)\n	at clojure.core.protocols$fn__6523.invoke(protocols.clj:167)\n	at clojure.core.protocols$fn__6478$G__6473__6487.invoke(protocols.clj:19)\n	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)\n	at clojure.core.protocols$fn__6506.invoke(protocols.clj:101)\n	at clojure.core.protocols$fn__6452$G__6447__6465.invoke(protocols.clj:13)\n	at clojure.core$reduce.invoke(core.clj:6519)\n	at cljs.analyzer$eval1668$fn__1670.invoke(analyzer.cljc:1909)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:251)\n	at cljs.analyzer$analyze_seq_STAR_.invoke(analyzer.cljc:2390)\n	at cljs.analyzer$analyze_seq_STAR__wrap.invoke(analyzer.cljc:2395)\n	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:2416)\n	at cljs.analyzer$analyze_form.invoke(analyzer.cljc:2525)\n	at cljs.analyzer$analyze_STAR_.invoke(analyzer.cljc:2572)\n	at cljs.analyzer$analyze.invoke(analyzer.cljc:2588)\n	at cljs.repl$evaluate_form.invoke(repl.cljc:440)\n	at cljs.repl$eval_cljs.invoke(repl.cljc:560)\n	at cljs.repl$repl_STAR_$read_eval_print__4860.invoke(repl.cljc:857)\n	at cljs.repl$repl_STAR_$fn__4866$fn__4875.invoke(repl.cljc:896)\n	at cljs.repl$repl_STAR_$fn__4866.invoke(repl.cljc:895)\n	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:1149)\n	at cljs.repl$repl_STAR_.invoke(repl.cljc:859)\n	at figwheel_sidecar.repl$eval15231$fn__15232.invoke(repl.clj:148)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:238)\n	at figwheel_sidecar.repl$repl.invoke(repl.clj:165)\n	at figwheel_sidecar.system$start_figwheel_repl.invoke(system.clj:471)\n	at figwheel_sidecar.system$figwheel_cljs_repl_STAR_.invoke(system.clj:515)\n	at figwheel_sidecar.system$build_switching_cljs_repl_STAR_.invoke(system.clj:521)\n	at figwheel_sidecar.system$cljs_repl_STAR_.invoke(system.clj:541)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:565)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:563)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:102)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:99)\n	at user$start_dev.invoke(figwheel.clj:32)\n	at user$eval16600.invoke(figwheel.clj:35)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at user$eval5.invoke(form-init407864836396501663.clj:1)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.eval(Compiler.java:6772)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\nifps3.core=> clojure.lang.ExceptionInfo: Only [lib.ns :only (names)] specs supported in :use / :use-macros; offending spec: [arcadia.core] at line 1 <cljs repl> {:file \"<cljs repl>\", :line 1, :column 1, :tag :cljs/analysis-error}\n	at clojure.core$ex_info.invoke(core.clj:4593)\n	at cljs.analyzer$error.invoke(analyzer.cljc:568)\n	at cljs.analyzer$error.invoke(analyzer.cljc:566)\n	at cljs.analyzer$use__GT_require.invoke(analyzer.cljc:1730)\n	at clojure.core$partial$fn__4527.invoke(core.clj:2493)\n	at clojure.core$comp$fn__4495.invoke(core.clj:2438)\n	at clojure.core$map$fn__4553.invoke(core.clj:2624)\n	at clojure.lang.LazySeq.sval(LazySeq.java:40)\n	at clojure.lang.LazySeq.seq(LazySeq.java:49)\n	at clojure.lang.Cons.next(Cons.java:39)\n	at clojure.lang.RT.boundedLength(RT.java:1735)\n	at clojure.lang.RestFn.applyTo(RestFn.java:130)\n	at clojure.core$apply.invoke(core.clj:634)\n	at cljs.analyzer$eval1668$fn__1670$fn__1675.invoke(analyzer.cljc:1926)\n	at clojure.core.protocols$fn__6523.invoke(protocols.clj:167)\n	at clojure.core.protocols$fn__6478$G__6473__6487.invoke(protocols.clj:19)\n	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)\n	at clojure.core.protocols$fn__6506.invoke(protocols.clj:101)\n	at clojure.core.protocols$fn__6452$G__6447__6465.invoke(protocols.clj:13)\n	at clojure.core$reduce.invoke(core.clj:6519)\n	at cljs.analyzer$eval1668$fn__1670.invoke(analyzer.cljc:1909)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:251)\n	at cljs.analyzer$analyze_seq_STAR_.invoke(analyzer.cljc:2390)\n	at cljs.analyzer$analyze_seq_STAR__wrap.invoke(analyzer.cljc:2395)\n	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:2416)\n	at cljs.analyzer$analyze_form.invoke(analyzer.cljc:2525)\n	at cljs.analyzer$analyze_STAR_.invoke(analyzer.cljc:2572)\n	at cljs.analyzer$analyze.invoke(analyzer.cljc:2588)\n	at cljs.repl$evaluate_form.invoke(repl.cljc:440)\n	at cljs.repl$eval_cljs.invoke(repl.cljc:560)\n	at cljs.repl$repl_STAR_$read_eval_print__4860.invoke(repl.cljc:857)\n	at cljs.repl$repl_STAR_$fn__4866$fn__4875.invoke(repl.cljc:896)\n	at cljs.repl$repl_STAR_$fn__4866.invoke(repl.cljc:895)\n	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:1149)\n	at cljs.repl$repl_STAR_.invoke(repl.cljc:859)\n	at figwheel_sidecar.repl$eval15231$fn__15232.invoke(repl.clj:148)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:238)\n	at figwheel_sidecar.repl$repl.invoke(repl.clj:165)\n	at figwheel_sidecar.system$start_figwheel_repl.invoke(system.clj:471)\n	at figwheel_sidecar.system$figwheel_cljs_repl_STAR_.invoke(system.clj:515)\n	at figwheel_sidecar.system$build_switching_cljs_repl_STAR_.invoke(system.clj:521)\n	at figwheel_sidecar.system$cljs_repl_STAR_.invoke(system.clj:541)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:565)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:563)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:102)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:99)\n	at user$start_dev.invoke(figwheel.clj:32)\n	at user$eval16600.invoke(figwheel.clj:35)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at user$eval5.invoke(form-init407864836396501663.clj:1)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.eval(Compiler.java:6772)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\nifps3.core=> clojure.lang.ExceptionInfo: Only [lib.ns :only (names)] specs supported in :use / :use-macros; offending spec: [arcadia.core] at line 1 <cljs repl> {:file \"<cljs repl>\", :line 1, :column 1, :tag :cljs/analysis-error}\n	at clojure.core$ex_info.invoke(core.clj:4593)\n	at cljs.analyzer$error.invoke(analyzer.cljc:568)\n	at cljs.analyzer$error.invoke(analyzer.cljc:566)\n	at cljs.analyzer$use__GT_require.invoke(analyzer.cljc:1730)\n	at clojure.core$partial$fn__4527.invoke(core.clj:2493)\n	at clojure.core$comp$fn__4495.invoke(core.clj:2438)\n	at clojure.core$map$fn__4553.invoke(core.clj:2624)\n	at clojure.lang.LazySeq.sval(LazySeq.java:40)\n	at clojure.lang.LazySeq.seq(LazySeq.java:49)\n	at clojure.lang.Cons.next(Cons.java:39)\n	at clojure.lang.RT.boundedLength(RT.java:1735)\n	at clojure.lang.RestFn.applyTo(RestFn.java:130)\n	at clojure.core$apply.invoke(core.clj:634)\n	at cljs.analyzer$eval1668$fn__1670$fn__1675.invoke(analyzer.cljc:1926)\n	at clojure.core.protocols$fn__6523.invoke(protocols.clj:167)\n	at clojure.core.protocols$fn__6478$G__6473__6487.invoke(protocols.clj:19)\n	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)\n	at clojure.core.protocols$fn__6506.invoke(protocols.clj:101)\n	at clojure.core.protocols$fn__6452$G__6447__6465.invoke(protocols.clj:13)\n	at clojure.core$reduce.invoke(core.clj:6519)\n	at cljs.analyzer$eval1668$fn__1670.invoke(analyzer.cljc:1909)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:251)\n	at cljs.analyzer$analyze_seq_STAR_.invoke(analyzer.cljc:2390)\n	at cljs.analyzer$analyze_seq_STAR__wrap.invoke(analyzer.cljc:2395)\n	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:2416)\n	at cljs.analyzer$analyze_form.invoke(analyzer.cljc:2525)\n	at cljs.analyzer$analyze_STAR_.invoke(analyzer.cljc:2572)\n	at cljs.analyzer$analyze.invoke(analyzer.cljc:2588)\n	at cljs.repl$evaluate_form.invoke(repl.cljc:440)\n	at cljs.repl$eval_cljs.invoke(repl.cljc:560)\n	at cljs.repl$repl_STAR_$read_eval_print__4860.invoke(repl.cljc:857)\n	at cljs.repl$repl_STAR_$fn__4866$fn__4875.invoke(repl.cljc:896)\n	at cljs.repl$repl_STAR_$fn__4866.invoke(repl.cljc:895)\n	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:1149)\n	at cljs.repl$repl_STAR_.invoke(repl.cljc:859)\n	at figwheel_sidecar.repl$eval15231$fn__15232.invoke(repl.clj:148)\n	at clojure.lang.MultiFn.invoke(MultiFn.java:238)\n	at figwheel_sidecar.repl$repl.invoke(repl.clj:165)\n	at figwheel_sidecar.system$start_figwheel_repl.invoke(system.clj:471)\n	at figwheel_sidecar.system$figwheel_cljs_repl_STAR_.invoke(system.clj:515)\n	at figwheel_sidecar.system$build_switching_cljs_repl_STAR_.invoke(system.clj:521)\n	at figwheel_sidecar.system$cljs_repl_STAR_.invoke(system.clj:541)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:565)\n	at figwheel_sidecar.system$cljs_repl.invoke(system.clj:563)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:102)\n	at figwheel_sidecar.repl_api$cljs_repl.invoke(repl_api.clj:99)\n	at user$start_dev.invoke(figwheel.clj:32)\n	at user$eval16600.invoke(figwheel.clj:35)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n	at java.lang.reflect.Method.invoke(Method.java:498)\n	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)\n	at clojure.lang.Reflector.invokeStaticMethod(Reflector.java:207)\n	at user$eval5.invoke(form-init407864836396501663.clj:1)\n	at clojure.lang.Compiler.eval(Compiler.java:6782)\n	at clojure.lang.Compiler.eval(Compiler.java:6772)\n	at clojure.lang.Compiler.load(Compiler.java:7227)\n	at clojure.lang.Compiler.loadFile(Compiler.java:7165)\n	at clojure.main$load_script.invoke(main.clj:275)\n	at clojure.main$init_opt.invoke(main.clj:280)\n	at clojure.main$initialize.invoke(main.clj:308)\n	at clojure.main$null_opt.invoke(main.clj:343)\n	at clojure.main$main.doInvoke(main.clj:421)\n	at clojure.lang.RestFn.invoke(RestFn.java:421)\n	at clojure.lang.Var.invoke(Var.java:383)\n	at clojure.lang.AFn.applyToHelper(AFn.java:156)\n	at clojure.lang.Var.applyTo(Var.java:700)\n	at clojure.main.main(main.java:37)\nifps3.core=> []\nifps3.core=> \nifps3.core=> \nifps3.core=> WARNING: Use of undeclared Var ifps3.core/->v3 at line 1 <cljs repl>\n",
 			"settings":
 			{
-				"buffer_size": 509,
-				"line_ending": "Windows",
+				"buffer_size": 36346,
+				"line_ending": "Unix",
 				"name": "*REPL* [clojure]",
 				"scratch": true
 			}
 		},
 		{
-			"file": "project.clj",
+			"file": "src/ifps3/data.cljs",
 			"settings":
 			{
-				"buffer_size": 1543,
-				"line_ending": "Windows"
+				"buffer_size": 1675,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/jplur/Desktop/dev/ipjs/src/ipjs/core.cljs",
+			"file": "/home/selfsame/colors",
 			"settings":
 			{
-				"buffer_size": 1846,
-				"line_ending": "Windows"
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-			}
-		},
-		{
-			"contents": "Microsoft Windows [Version 6.1.7601]\nCopyright (c) 2009 Microsoft Corporation.  All rights reserved.\nThe system cannot find the path specified.\n\nC:\\Program Files\\Sublime Text 3>cd C:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src\\ifps3\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src\\ifps3>cd jav	\nThe system cannot find the path specified.\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src\\ifps3>cd ../../\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk>cd jav	\nThe system cannot find the path specified.\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk>cd javascrip\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip>dir\n Volume in drive C has no label.\n Volume Serial Number is 868A-6546\n\n Directory of C:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip\n\n02/26/2016  06:53 PM    <DIR>          .\n02/26/2016  06:53 PM    <DIR>          ..\n02/26/2016  06:53 PM    <DIR>          duplicates\n02/26/2016  06:53 PM    <DIR>          html\n02/26/2016  06:53 PM    <DIR>          ipfs\n02/26/2016  06:53 PM                33 split\n               1 File(s)             33 bytes\n               5 Dir(s)   6,803,533,824 bytes free\n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip>ipfs add -r ./\nadded QmeiGALmATmfn35p1KfrRJinja7uAbDChqoA3KkAGmASq9 duplicates\\decode\nadded QmbrnV1GPgTYwsDo3UY1zMTSrnzrr76Qq8MX1qNtwEGKqK duplicates\\encode\nadded QmVQYNaYyeCptmNHPbypctADf4zg5kYSqYpN7dnZmNkCV9 duplicates\\split\nadded Qmehy1BJ1kfMTvi4BcdViU3jbNjbYLDLqTHgrS75poF9vx duplicates\nadded QmeiGALmATmfn35p1KfrRJinja7uAbDChqoA3KkAGmASq9 html\\decode\nadded QmbrnV1GPgTYwsDo3UY1zMTSrnzrr76Qq8MX1qNtwEGKqK html\\encode\nadded QmWMLj3Kw3ugZ2MSzuJFhq9q5J7VPAV7LH7U3NsDkAVDoC html\nadded QmZqxnF7BmSeKgp5wh4asxvJiBph3hdeBhwAZp7BBGp84F ipfs\\link\\pattern\nadded QmQAPK8Uj11LRUbFuw8XME3fceErb8Mw1AnpkbD96ZvJxB ipfs\\link\nadded QmaLVDr8Geb3YDAnz7UATksrEPbXzyfQQERQRCkKkoynsy ipfs\nadded QmVQYNaYyeCptmNHPbypctADf4zg5kYSqYpN7dnZmNkCV9 split\nadded QmYhkkzLDkN8dfYoEe9ERTgjVnP5AexuBuZhCNYtHDdioJ .\nadded QmVfZLPJkbKfVALskNsiCzsbPtVPp2CmuiU9aaRc1ctSKA \n\nC:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\javascrip>",
-			"settings":
-			{
-				"buffer_size": 2005,
-				"line_ending": "Windows",
-				"name": "*REPL* [shell]",
-				"read_only": true,
-				"scratch": true
+				"buffer_size": 704,
+				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/PackageDev/Support/Convert to ....sublime-build",
+	"build_system": "",
 	"build_system_choices":
 	[
-		[
-			[
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					""
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"JSON"
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"Property List"
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"YAML (Block Style)"
-				],
-				[
-					"Packages/PackageDev/Support/Convert to ....sublime-build",
-					"YAML (Default Style)"
-				]
-			],
-			[
-				"Packages/PackageDev/Support/Convert to ....sublime-build",
-				"Property List"
-			]
-		]
 	],
 	"build_varint": "",
 	"command_palette":
@@ -470,7 +406,7 @@
 	},
 	"console":
 	{
-		"height": 139.0,
+		"height": 233.0,
 		"history":
 		[
 			"view.run_command(\"expand_selection\", {\"to\": \"word\"})",
@@ -519,7 +455,6 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
 		"/home/selfsame/dev/ipfs-desk",
 		"/home/selfsame/dev/ipfs-desk/resources",
 		"/home/selfsame/dev/ipfs-desk/resources/public",
@@ -527,11 +462,16 @@
 		"/home/selfsame/dev/ipfs-desk/scripts",
 		"/home/selfsame/dev/ipfs-desk/src",
 		"/home/selfsame/dev/ipfs-desk/src/ifps3",
-		"/home/selfsame/dev/ipfs-desk/src/ipfs",
 		"/home/selfsame/dev/ipfs-desk/target"
 	],
 	"file_history":
 	[
+		"/home/selfsame/om-logs/colors.txt",
+		"/home/selfsame/om.txt",
+		"/home/selfsame/dev/ipfs-desk/src/ifps3/util.cljs",
+		"/home/selfsame/.config/sublime-text-3/Packages/SublimeREPL/config/ClojureScript/Main.sublime-menu",
+		"/home/selfsame/.knowledge/dag",
+		"/home/selfsame/.knowledge/author/selfsame",
 		"/home/selfsame/dev/ipfs-desk/src/ifps3/data.cljs",
 		"/home/selfsame/dev/ipfs-desk/resources/public/css/style.css",
 		"/home/selfsame/blog/todo",
@@ -550,51 +490,6 @@
 		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/src/ifps3/data.cljs",
 		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/scripts/figwheel.clj",
 		"/C/Users/jparker/Desktop/PROJECTS/joe/dev/ipfs-desk/resources/public/index.html",
-=======
-		"/C/Users/jplur/Desktop/dev/ipfs-desk",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/html",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ipfs",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit"
-	],
-	"file_history":
-	[
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/db",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/clojurescript.sublime-settings",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit/core.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/html/decode",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/html/encode",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojure.sublime-settings",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/note.txt",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/link-finder.html",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/javascrip/encode",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/ClojureScript/clojurescript.tmLanguage",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/heh/core.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/core.cljs",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.sublime-settings",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/test.cljs",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/clojure-cool.YAML-tmTheme",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/ifps3/data.cljs",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
-		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/clojure-cool.tmTheme",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/figwheel.bat",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/README.md",
-		"/C/Users/jplur/Desktop/dev/final/src/sync/mouse.cljs",
-		"/C/Users/jplur/Desktop/dev/final/src/sync/keys.cljs",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/project.clj",
-		"/C/Users/jplur/Desktop/dev/final/project.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/src/orbit/core.cljs",
-		"/C/Users/jplur/Desktop/dev/learnnext/src/learnnext/core.cljs",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public/index.html",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/scripts/figwheel.clj",
-		"/C/Users/jplur/Desktop/dev/ipfs-desk/resources/public/css/style.css",
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 		"/C/Users/jplur/Desktop/oisjfd.gif",
 		"/C/Users/jplur/Desktop/dev/ifps3/resources/public/css/style.css",
 		"/C/Users/jplur/Desktop/dev/ifps3/scripts/figwheel.clj",
@@ -654,6 +549,7 @@
 		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/meta.txt",
 		"/C/Users/jplur/Desktop/dev/selenica/resources/public/img/photos/imgmeta.py",
 		"/C/Users/jplur/Desktop/giflife.py",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/arcadia-repl/Clojure.YAML-tmLanguage",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/dense/core.cljs",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/impl.cljc",
 		"/C/Users/jplur/Desktop/dev/learnnext/src/pdf/core.cljs",
@@ -664,6 +560,7 @@
 		"/C/Users/jplur/Desktop/dev/learnnext/project.clj",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Arcadia/Arcadia.tmlanguage",
 		"/C/Users/jplur/Desktop/dev/learnnext/learnnext.sublime-project",
+		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/User/Clojure.sublime-settings",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Unity/Default.sublime-commands",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Clojure/Unity/Main.sublime-menu",
 		"/C/Users/jplur/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
@@ -691,22 +588,12 @@
 		"/C/Users/jplur/work/dev/final/src/fp/depreciated.cljs",
 		"/C/Users/jplur/work/dev/final/resources/public/css/toolbox.css",
 		"/C/Users/jplur/work/dev/final/resources/public/index.html",
-<<<<<<< HEAD
 		"/C/Users/jplur/work/dev/final/src/fp/std.clj",
 		"/C/Users/jplur/work/dev/final/src/css/units.cljs",
 		"/C/Users/jplur/work/dev/final/src/fp/canvas.cljs",
 		"/C/Users/jplur/work/dev/final/src/sync/space.cljs",
 		"/C/Users/jplur/work/dev/final/src/pdf/core.clj",
-		"/C/Users/jplur/work/dev/final/src/pdf/core.cljs",
-		"/C/Users/jplur/Desktop/giflife.html",
-		"/C/Users/jplur/Desktop/Vault (D) - Shortcut.lnk",
-		"/D/Blender/BlackIsle/New folder/04 CFNM GIFs/index.html",
-		"/C/Users/jplur/work/dev/final/src/comp/interface.cljs",
-		"/C/Users/jplur/work/dev/final/src/comp/dialogue.cljs",
-		"/C/Users/jplur/work/dev/final/src/fp/final.cljs"
-=======
-		"/C/Users/jplur/work/dev/final/src/fp/std.clj"
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+		"/C/Users/jplur/work/dev/final/src/pdf/core.cljs"
 	],
 	"find":
 	{
@@ -717,7 +604,6 @@
 		"height": 109.0,
 		"where_history":
 		[
-			"C:\\Users\\jplur\\Desktop\\dev\\ipfs-desk\\src",
 			"C:\\Users\\jplur\\Desktop\\dev\\ifps3",
 			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src\\ifps3",
 			"C:\\Users\\jplur\\Desktop\\dev\\ifps3\\src",
@@ -749,7 +635,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-<<<<<<< HEAD
+			":selection",
+			"toggle-selection",
+			"reconciler",
+			":view",
+			"HEAD",
 			"prn",
 			"pprint",
 			"prn",
@@ -757,27 +647,9 @@
 			".log",
 			"prn",
 			"pprint",
-=======
-			"log",
-			"construct",
-			"log",
-			"clog",
-			"ls",
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 			"prn",
-			")))",
-			"put-local",
-			"reconciler",
-			"save",
-			"val",
-			"string",
-			"backgr",
-			"background",
-			"normalize-dag",
-			"415px",
-			"reconciler",
-			"pdf",
-			"guess-mime",
+			".file",
+			"file",
 			"prn",
 			"event",
 			"EventType",
@@ -886,28 +758,18 @@
 			" px",
 			"px",
 			"element-offset",
-<<<<<<< HEAD
 			"class-str",
 			"icon",
 			"draggable",
 			"modal-box",
-			"dialogue",
-			"modal-box",
-			"icon",
-			"click-mode-option",
-			"UID",
-			"alter-class-string"
-=======
-			"class-str"
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+			"dialogue"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
-			"pdfn",
 			"Exception",
 			"->v3",
 			"\\{\\n\\t",
@@ -974,36 +836,29 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
 					"file": "src/ifps3/cloud.cljs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3795,
-=======
-					"file": "src/ifps3/core.cljs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11744,
+						"buffer_size": 4820,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10632,
-								10632
+								4271,
+								4271
 							]
 						],
 						"settings":
@@ -1013,32 +868,92 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4800.0,
+						"translation.y": 1564.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/ifps3/util.cljs",
+					"file": "src/ipfs/core.cljs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 678,
+						"buffer_size": 1560,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								678,
-								678
+								112,
+								112
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/ifps3/core.cljs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4400,
+								4400
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1964.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/ifps3/util.cljs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1293,
+								1293
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1050,85 +965,56 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/ifps3/cloud.cljs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3431,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								467,
-								467
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1020.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/ipfs/core.cljs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1529,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1529,
-								1529
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "src/ifps3/data.cljs",
+					"file": "resources/public/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1747,
+						"buffer_size": 7952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1305,
-								1305
+								1413,
+								1413
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
+							"color_scheme": "Packages/User/Color Highlighter/themes/fox.dark.tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 993.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "scripts/figwheel.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 991,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1136,7 +1022,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1146,31 +1032,23 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 509,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+						"buffer_size": 36346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								2420,
-								2420
-=======
-								509,
-								509
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+								36346,
+								36346
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
-=======
 							"auto_complete": true,
 							"auto_indent": false,
 							"detect_indentation": false,
@@ -1180,7 +1058,7 @@
 							"line_numbers": false,
 							"repl": true,
 							"repl_external_id": "clojure",
-							"repl_id": "db5da4bb761342d8b3e0fa55f69c7d51",
+							"repl_id": "57318f5aa0a245ac916aa294c2297d59",
 							"repl_restart_args":
 							{
 								"cmd":
@@ -1188,12 +1066,18 @@
 									"linux":
 									[
 										"lein",
-										"figwheel"
+										"run",
+										"-m",
+										"clojure.main",
+										"--init",
+										"scripts/figwheel.clj"
 									],
 									"osx":
 									[
 										"lein",
-										"figwheel"
+										"trampoline",
+										"cljsbuild",
+										"repl-listen"
 									],
 									"windows":
 									[
@@ -1209,7 +1093,7 @@
 								{
 									"linux": "$file_path",
 									"osx": "$file_path",
-									"windows": "$file_path"
+									"windows": "c:/Clojure"
 								},
 								"encoding": "utf8",
 								"extend_env":
@@ -1218,98 +1102,43 @@
 								},
 								"external_id": "clojure",
 								"soft_quit": "\n(. System exit 0)\n",
-								"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+								"syntax": "Packages/Clojure/Clojure.tmLanguage",
 								"type": "subprocess"
 							},
 							"repl_sublime2": false,
 							"smart_indent": false,
 							"spell_check": false,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
-<<<<<<< HEAD
 						"translation.x": 0.0,
-						"translation.y": 1185.0,
+						"translation.y": 6151.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/public/linker.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3400,
-=======
-						"translation.x": -0.0,
-						"translation.y": 101.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 6,
-					"file": "project.clj",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1543,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								588,
-								588
-=======
-								501,
-								501
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/New York (dark).tmTheme",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-<<<<<<< HEAD
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
+					"buffer": 7,
 					"file": "src/ifps3/data.cljs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1747,
+						"buffer_size": 1675,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1305,
-								1305
+								1675,
+								1675
 							]
 						],
 						"settings":
@@ -1319,183 +1148,46 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
-=======
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+						"translation.y": 429.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-<<<<<<< HEAD
-					"buffer": 3,
-					"file": "src/ifps3/core.cljs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11555,
-=======
-					"buffer": 7,
-					"file": "/C/Users/jplur/Desktop/dev/ipjs/src/ipjs/core.cljs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1846,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								11054,
-								11054
-=======
-								1206,
-								1206
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4651.0,
-=======
-							"syntax": "Packages/SublimeREPL/config/ClojureScript/clojurescript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 495.0,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-<<<<<<< HEAD
-					"buffer": 4,
-					"file": "scripts/figwheel.clj",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 991,
-=======
 					"buffer": 8,
+					"file": "/home/selfsame/colors",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2005,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+						"buffer_size": 704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								158,
-								158
-=======
-								1909,
-								1955
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+								323,
+								323
 							]
 						],
 						"settings":
 						{
-							"auto_complete": true,
-							"auto_indent": false,
-							"detect_indentation": false,
-							"gutter": false,
-							"history_arrows": true,
-							"indent_subsequent_lines": false,
-							"line_numbers": false,
-							"repl": true,
-							"repl_external_id": "shell",
-							"repl_id": "041a6a86d91542528aa6f8288065cce8",
-							"repl_restart_args":
-							{
-								"cmd":
-								{
-									"linux":
-									[
-										"bash",
-										"-i"
-									],
-									"osx":
-									[
-										"bash",
-										"-i"
-									],
-									"windows":
-									[
-										"cmd.exe"
-									]
-								},
-								"cmd_postfix": "\n",
-								"cwd": "$file_path",
-								"encoding":
-								{
-									"linux": "utf-8",
-									"osx": "utf-8",
-									"windows": "$win_cmd_encoding"
-								},
-								"env":
-								{
-								},
-								"external_id": "shell",
-								"suppress_echo": true,
-								"syntax": "Packages/Text/Plain text.tmLanguage",
-								"type": "subprocess"
-							},
-							"repl_sublime2": false,
-							"smart_indent": false,
-							"spell_check": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
-<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
-		},
-		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"sheets":
-			[
-			]
-=======
-						"translation.y": 421.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				}
-			]
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
 		}
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1527,21 +1219,13 @@
 		"cols":
 		[
 			0.0,
-<<<<<<< HEAD
-			0.5,
-=======
-			0.616505415766,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+			0.670260681395,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-<<<<<<< HEAD
-			0.5,
-=======
-			0.328660390122,
->>>>>>> 11456273a1135ed653a1b049e00e10e534e0beae
+			0.453222453222,
 			1.0
 		]
 	},
@@ -1550,15 +1234,11 @@
 	{
 		"height": 0.0
 	},
-	"output.package_dev":
-	{
-		"height": 92.0
-	},
-	"pinned_build_system": "Packages/PackageDev/Support/Convert to ....sublime-build",
+	"pinned_build_system": "",
 	"project": "ifps3.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1596,7 +1276,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1604,7 +1284,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 163.0,
+	"side_bar_width": 145.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

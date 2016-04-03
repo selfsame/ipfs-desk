@@ -36,3 +36,8 @@
     (map? (first col)) (apply merge-with combine col)
     (vector? (last col)) (last col)
     :else (last col)))
+
+(defn by-key-vec [k v] 
+  (if (sequential? v) 
+    (mapv #(vector k %) v)
+    (vector k v)))

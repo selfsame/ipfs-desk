@@ -58,6 +58,3 @@
    :secret nil
    :selection #{:std}
   }))
-
-
-

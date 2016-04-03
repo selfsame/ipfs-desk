@@ -17,7 +17,6 @@
     [ifps3.util :only [->edn edn->]]))
 
 (enable-console-print!)
-(set! om/*logger* nil)
 
 (defn render-count 
   ([this] (render-count this {}))
@@ -37,37 +36,37 @@
 
 (pdfn read [env k params]
   (let [{:keys [state ast]} env]
-    ;(prn k (:ast env) (keys env))
     (cond (= :prop (-> env :ast :type))
       {:value (get @(:state env) k)}
       :else 
       {:value (read-local env k params)})))
 
 (pdfn read [env k params]
-  {k #{:view}}
-  {:value (get-in @(:state env) [k])})
-
-(pdfn read [env k params]
-  {k (is* :meta/by-id)}
-  (let [{:keys [state ast]} env
-        local (get-in @state [k])]
-  (merge {:value local}
-    (if (= {} local)
-        {:localStorage ast} {}))))
-
-(pdfn read [env k params]
   {k (is* :secret)}
   {:value (get-local "secret")})
 
 (pdfn read [env k params]
-  {k (is* :selection)}
-  {:value (get @(:state env) k)})
+  {k (is* :desktop)}
+  (let [{:keys [state ast query]} env
+        res (om/db->tree query @state @state)]
+    (pprint/pprint [:desktop query])
+  {:value res}))
+
+(pdfn read [env k params]
+  {k (is* :view/list)}
+  (let [{:keys [state ast query]} env
+        view (:view @state) 
+        items 
+        (cond 
+          (keyword? view) (om/db->tree (util/by-key-vec view (vals (get @state view))) @state @state)
+          (vector? view) (om/db->tree [{[:dags/by-id (last view)] [:links]}] @state @state)
+            :else [])
+        res (om/db->tree query @state @state)]
+  {:value (:links (last (first items)))}))
 
 (pdfn read [env k params]
   {k (is* :dags)}
   (let [{:keys [state ast query]} env]
-    ;TODO local and remote
-    ;(prn (get @state k) (map (comp (:dags/by-id @state) last) (get @state k)))
   {:value (om/db->tree query (get @state k) @state)}))
 
 
@@ -123,6 +122,8 @@
   :parser (om/parser {:read read :mutate mutate})
   :remotes [:s3 :localStorage]
   :send dispatch-send
+  :logger nil 
+  :pathopt true
   :merge-tree dispatch-merge}))
 
 (cloud/load-data :meta/by-id :dags/by-id :dags)
@@ -152,26 +153,28 @@
 
 (defn selected? [id] ((:selection @data/DATA) id))
 
-(defn toggle-selection [k]
-  (om/transact! reconciler `[(std/update-in ~{
+(defn toggle-selection 
+  ([k] (toggle-selection reconciler k))
+  ([this k]
+  (om/transact! this `[(std/update-in ~{
     :path [:selection] 
-    :fn (fn [col] (if (col k) (disj col k) (conj col k)))}) :selection]))
+    :fn (fn [col] (if (col k) (disj col k) (conj col k)))})])))
 
-(defn view-set-fn [v]
-  (fn [e] (om/transact! reconciler `[(state/conj {:view ~v }) :view])))
+(defn view-set-fn [this v]
+  (fn [e] (om/transact! this `[(state/conj {:view ~v }) :view])))
 
-(defn view-path-fn [v]
-  (fn [e] (om/transact! reconciler `[(std/update-in {:path [:view] :fn #(vec (concat % [~v]))}) :view])))
+(defn view-path-fn [this v]
+  (fn [e] (om/transact! this `[(std/update-in {:path [:view] :fn #(vec (concat % [~v]))}) :view])))
 
 
 
 (defui File
-  static om/Ident
-  (ident [this props]
+  ;static om/Ident
+  #_(ident [this props]
     [:meta/by-id (:id props)])
   static om/IQuery
   (query [this] 
-    `[:id :type])
+    `[:id :type :size :name])
   Object
   (render [this]
     (let [props (om/props this)
@@ -185,18 +188,22 @@
             (<img (src (cond 
               (:dag props) "img/icons/folder.png"
               :else "img/icons/page.png"))
-              (onClick (if (:dag props) (view-set-fn (vec (concat (:view @data/DATA) [(:id props)]))) #(prn %))))
+              (onClick (if (:dag props) (view-set-fn this (vec (concat (:view @data/DATA) [(:id props)]))) #(prn %))))
           
           (<span.hotspot 
-            (onClick (fn [e] (om/transact! reconciler `[(std/update-in ~select) :selection])))
+            
+            (onClick [e] (om/transact! this `[(std/update-in ~select)]))
             #_(when (:thumbnail props)
               (<img (src (:thumbnail props)) (style {:verticalAlign :middle})))
-            (<span.record (:name props))
+            (<span.record (:name props) "  " (str (meta props)))
+
             (<span.record (last (.split (str (:type props)) "/"))
-              (style {:right :14em}))
+              (<a  "(http)" (href (str "http://ipfs.io/ipfs/" (:id props))))
+              (style {:right :14em})
+              (render-count this))
             (<span.record.right (hyper.tools/format-bytes (:size props)))
             (<span.record.right (iphash {:value (:id props)}))))))))
-(def file (om/factory File))
+(def file (om/factory File {:keyfn :id}))
 
 
 (defn name->path [s] (map last (re-seq #"([^\\]+)[\\]*" s)))
@@ -266,7 +273,7 @@
           (class (if (selected? id) "selected" ""))
           (iphash {:value (:id props)})
           (<span.hotspot) 
-            (onClick (fn [e] (om/transact! reconciler `[(std/update-in ~select) :selection])))
+            ;(onClick (fn [e] (om/transact! this `[(std/update-in ~select)])))
             (<div (style {:padding-left :1em})
               #_(map #(<pre (style {:margin :0em :font-size :10px})(:name %))
                 (:links props)) ))))))
@@ -281,20 +288,13 @@
              (cloud/read-file file)))))
 
 
-
-(defui Main
+(defui Desktop
   static om/Ident
-  (ident [this props] :Main)
+  (ident [this props] [:desktop])
   static om/IQueryParams
-  (params [this] {})
+  (params [this] {:view-head :cwd})
   static om/IQuery
-  (query [this] 
-    `[:meta/by-id
-      {:dags ~(om/get-query Dag) }
-      :selection
-      :schema/by-id
-      :schema/locked
-      :view])
+  (query [this] `[:view {?view-head ~(om/get-query File)}])
   Object
   (componentDidMount [this]
     (.addEventListener js/document "drop"
@@ -305,11 +305,50 @@
       (fn [e] (.preventDefault e))))
   (render [this]
     (let [props (om/props this)
-          params (om/get-params this)
           view (:view props)
-          view-list (cond (keyword? view) (vals (view props))
-                          (vector? view) (:links (get-in @data/DATA [:dags/by-id (last view)]))
-                          :else [])]
+          view-list (cond 
+            (keyword? view) (vals (get-in @data/DATA [view]))
+            (vector? view) (:links (get-in @data/DATA [:dags/by-id (last view)]))
+            :else [])]
+      (pprint/pprint [(meta props)])
+            (prn (meta (:view/list props))(meta (first (:view/list props))))
+      (html
+        (<div.desktop
+          (render-count this)
+          (<div.info 
+              (style {:fontSize 14 :background :orange 
+                :position :fixed :zIndex "999999" :left 107
+                :top 0 :right 167 :height "1.2em" :padding :2px})
+              (if (vector? view) 
+                (map-indexed (fn [idx id] 
+                  (<span (style {:float :left :cursor :pointer})
+                    (dag (get-in @data/DATA [:dags/by-id id]))
+                    (onClick (view-set-fn this (vec (take (inc idx) view)))))) view)
+                (str view)))
+
+            (<pre (map #(file (if (get-in @data/DATA [:dags/by-id (:id %) :dag]) (assoc % :dag true) %)) 
+              (sort-by (comp - :size) view-list ;(:view/list props) ;view-list
+                #_(map #(with-meta % {:om-path [[:meta/by-id (:id %)]]}) (:cwd props)) )))
+            (if (:over (om/get-state this)) 
+                (<div.filedrop "drop to add file")))))))
+(def desktop (om/factory Desktop))
+
+(defui Main
+  static om/Ident
+  (ident [this props] :Main)
+  static om/IQueryParams
+  (params [this] {})
+  static om/IQuery
+  (query [this] 
+    `[{:dags ~(om/get-query Dag) }
+      {:desktop ~(om/get-query Desktop)}
+      :view/list
+      :schema/by-id
+      :schema/locked])
+  Object
+  (render [this]
+    (let [props (om/props this)]
+
       (html
         (<div.app
           (render-count this)
@@ -319,7 +358,7 @@
             (map 
               #(<div.selectable.keyword (key %) 
                 (style {:display :inline-block :float :left :clear :both})
-                (<code (str %)) (onClick (view-set-fn %))) 
+                (<code (str %)) (onClick (view-set-fn this %))) 
               [:meta/by-id])
 
             (<br)(<code "schemas")(<br)
@@ -327,37 +366,23 @@
               (<span.selectable.keyword.schema (key (rand))
                 (class (if (selected? k) "selected" ""))
                 (style {:display :inline-block :float :left :clear :both})
-                (onClick (fn [e] (toggle-selection k)))
+                (onClick (fn [e] (toggle-selection this k)))
                 (<code (str k))))
                 (:schema/by-id props))
 
             (<code "dags")
             (map #(<span.selectable (key (:id %))
                 (style {:display :inline-block :float :left :clear :both})
-                (onClick (view-set-fn [(:id %)]))
+                (onClick (view-set-fn this [(:id %)]))
                 (dag %)) 
               (:dags props)))
-
-          (<div.desktop
-            (<div.info 
-              (style {:fontSize 14 :background :orange 
-                :position :fixed :zIndex "999999" :left 107
-                :top 0 :right 167 :height "1.2em" :padding :2px})
-              (if (vector? view) 
-                (map-indexed (fn [idx id] 
-                  (<span (style {:float :left :cursor :pointer})
-                    (dag (get-in @data/DATA [:dags/by-id id]))
-                    (onClick (view-set-fn (vec (take (inc idx) view)))))) view)
-                (str view)))
-
-            (<pre (map #(file (if (get-in @data/DATA [:dags/by-id (:id %) :dag]) (assoc % :dag true) %)) (sort-by (comp - :size) view-list)))
-            (if (:over (om/get-state this)) 
-                (<div.filedrop "drop to add file")))
-          (<div.editor
+          (desktop (assoc (:desktop props) :view/list (:view/list props)))
+          #_(<div.editor
             (map (fn [[k v]]
               (<div
                 (data-editor (conj props {:schema [k v]}))))
-            (filter (comp (:selection props) first) (:schema/by-id props))) ))))))
+            (filter (comp (:selection props) first) (:schema/by-id props))) )
+          )))))
 
 
 
@@ -370,14 +395,14 @@
         #(swap! data/KEYS disj (.-keyCode %)))))
 
 (defn add-dag [id]
- (swap! data/DATA update-in [:dags] #(vec (concat % [[:dags/by-id id]])))
+ (swap! data/DATA update-in [:dags] #(vec (distinct (concat % [[:dags/by-id id]]))))
  (cloud/save-data :dags))
 
-(add-dag "QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh")
+;(add-dag "QmSrCRJmzE4zE1nAfWPbzVfanKQNBhp7ZWmMnEdbiLvYNh")
 
 
 
-;(cloud/save-data :meta/by-id :dags/by-id)
+;(cloud/save-data :meta/by-id :dags/by-id :dags)
 
 ;TODO [ ] store meta data in localStorage | s3
 ;TODO [ ] transaction to unpin files
